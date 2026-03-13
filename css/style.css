@@ -1,0 +1,119 @@
+/* ============================================
+   EC家計簿 LP - スタイルシート
+============================================ */
+
+/* ---------- フォント設定 ---------- */
+@font-face {
+  font-family: "LINESeedJP";
+  src: url("../fonts/LINESeedJP-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LINESeedJP";
+  src: url("../fonts/LINESeedJP-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LINESeedJP";
+  src: url("../fonts/LINESeedJP-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LINESeedJP";
+  src: url("../fonts/LINESeedJP-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- ベース設定 ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* スムーズスクロールのズレ防止 */
+}
+
+body {
+  font-family: "LINESeedJP", "Noto Sans JP", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- スクロールアニメーション (Reveal) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- ナビゲーション (下線アニメーション) ---------- */
+/* ベース: Tailwindのクラスを補完 */
+nav a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+  font-weight: 600;
+}
+
+/* 下線要素 */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff; /* 白い線 */
+  transition: width 0.3s ease;
+}
+
+/* アクティブ時 または ホバー時に線を伸ばす */
+nav a.active::after,
+nav a:hover::after {
+  width: 100%;
+}
+
+/* アクティブ時は太字にする場合の補助 (Tailwindでやるなら不要だが念のため) */
+nav a.active {
+  font-weight: 800; /* ExtraBold */
+  opacity: 1;
+}
+
+/* ---------- ハンバーガーアイコン アニメーション ---------- */
+#menu-btn span {
+  transform-origin: center;
+}
+
+#menu-btn.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+#menu-btn.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ---------- 背景・装飾 ---------- */
+/* ヒーローエリアの円弧テキストなどを回転させる場合 */
+.animate-spin-slow {
+  animation: spin-slow 60s linear infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

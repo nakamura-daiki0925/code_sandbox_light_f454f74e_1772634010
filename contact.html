@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせ | EC家計簿</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Config (LPと同じ設定) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "ec-green": "#29b051",
+              "ec-green-dark": "#067f38",
+              "ec-orange": "#f39800",
+              "ec-green-pale": "#f0faf4",
+            },
+            fontFamily: { sans: ["Noto Sans JP", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+        border-color: #29b051;
+        box-shadow: 0 0 0 3px rgba(41, 176, 81, 0.2);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <!-- ========== HEADER ========== -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 w-full z-50 text-white shadow-md bg-[#009e46]"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between h-16 lg:h-20"
+      >
+        <a
+          href="index.html"
+          class="flex items-center shrink-0 hover:opacity-80 transition-opacity"
+        >
+          <img
+            src="images/common/logo-white3.png"
+            alt="EC家計簿"
+            class="h-8 lg:h-10 w-auto object-contain"
+          />
+        </a>
+
+        <!-- デスクトップナビ -->
+        <nav
+          class="hidden lg:flex items-center gap-6 text-sm tracking-wide font-bold"
+        >
+          <a href="index.html#about" class="hover:opacity-70 transition-opacity"
+            >EC家計簿とは？</a
+          >
+          <a
+            href="index.html#reasons"
+            class="hover:opacity-70 transition-opacity"
+            >選ばれる理由</a
+          >
+          <a href="index.html#cases" class="hover:opacity-70 transition-opacity"
+            >導入事例</a
+          >
+          <a href="index.html#flow" class="hover:opacity-70 transition-opacity"
+            >導入までの流れ</a
+          >
+          <a href="index.html#news" class="hover:opacity-70 transition-opacity"
+            >お知らせ</a
+          >
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-3">
+          <a
+            href="index.html"
+            class="text-sm bg-white text-ec-green-dark px-6 py-3 font-bold hover:bg-gray-100 transition-colors rounded shadow-md"
+          >
+            TOPへ戻る
+          </a>
+        </div>
+
+        <!-- ハンバーガーボタン (lg未満のみ) -->
+        <button
+          id="menu-btn"
+          class="flex lg:hidden flex-col gap-1.5 p-2"
+          aria-label="メニュー"
+        >
+          <span
+            class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+          <span
+            class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+          <span
+            class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+        </button>
+      </div>
+
+      <!-- モバイルメニュー -->
+      <div
+        id="mobile-menu"
+        class="fixed top-0 right-0 h-full w-64 bg-white shadow-xl flex flex-col px-6 py-8 gap-4 z-50 translate-x-full transition-transform duration-300 lg:hidden"
+      >
+        <button
+          id="menu-close"
+          class="self-end text-gray-500 hover:text-gray-800 mb-2"
+        >
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <div class="flex flex-col gap-4 font-bold">
+          <a
+            href="index.html#about"
+            class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors"
+            >EC家計簿とは？</a
+          >
+          <a
+            href="index.html#reasons"
+            class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors"
+            >選ばれる理由</a
+          >
+          <a
+            href="index.html#cases"
+            class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors"
+            >導入事例</a
+          >
+          <a
+            href="index.html#flow"
+            class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors"
+            >導入までの流れ</a
+          >
+          <a
+            href="index.html#news"
+            class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors"
+            >お知らせ</a
+          >
+          <div class="flex flex-col gap-3 mt-4">
+            <a
+              href="index.html"
+              class="text-center bg-[#004d25] text-white px-4 py-3 rounded font-bold"
+              >TOPへ戻る</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+      <!-- Page Title -->
+      <div
+        class="bg-[#009e46] py-12 text-center text-white relative overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 opacity-20"
+          style="
+            background-image: url('images/hero/hero-bg-gradient.png');
+            background-size: cover;
+          "
+        ></div>
+        <div class="relative z-10">
+          <h1 class="text-3xl lg:text-4xl font-black mb-2">お問い合わせ</h1>
+          <p class="text-sm opacity-90">Contact Us</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="max-w-3xl mx-auto px-4 lg:px-8 py-16">
+        <div class="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
+          <p class="text-sm text-gray-600 mb-8 leading-relaxed">
+            サービスに関するご質問、お見積もりのご依頼など、お気軽にお問い合わせください。<br />
+            内容を確認後、担当者より2営業日以内にご連絡させていただきます。
+          </p>
+
+          <form action="#" method="POST" class="flex flex-col gap-6">
+            <!-- 会社名 -->
+            <div>
+              <label
+                for="company"
+                class="block text-sm font-bold text-gray-700 mb-2"
+              >
+                会社名 <span class="text-ec-orange text-xs ml-1">必須</span>
+              </label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="例）株式会社リタエン"
+                class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-700 transition-all"
+                required
+              />
+            </div>
+
+            <!-- お名前 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label
+                  for="name_sei"
+                  class="block text-sm font-bold text-gray-700 mb-2"
+                >
+                  氏名（姓）
+                  <span class="text-ec-orange text-xs ml-1">必須</span>
+                </label>
+                <input
+                  type="text"
+                  id="name_sei"
+                  name="name_sei"
+                  placeholder="例）山田"
+                  class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-700 transition-all"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="name_mei"
+                  class="block text-sm font-bold text-gray-700 mb-2"
+                >
+                  氏名（名）
+                  <span class="text-ec-orange text-xs ml-1">必須</span>
+                </label>
+                <input
+                  type="text"
+                  id="name_mei"
+                  name="name_mei"
+                  placeholder="例）太郎"
+                  class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-700 transition-all"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- メールアドレス -->
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-bold text-gray-700 mb-2"
+              >
+                メールアドレス
+                <span class="text-ec-orange text-xs ml-1">必須</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="例）info@ritaen.com"
+                class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-700 transition-all"
+                required
+              />
+            </div>
+
+            <!-- 電話番号 -->
+            <div>
+              <label
+                for="tel"
+                class="block text-sm font-bold text-gray-700 mb-2"
+              >
+                電話番号
+              </label>
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                placeholder="例）03-1234-5678"
+                class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-700 transition-all"
+              />
+            </div>
+
+            <!-- お問い合わせ種別 -->
+            <div>
+              <label
+                for="category"
+                class="block text-sm font-bold text-gray-700 mb-2"
+              >
+                お問い合わせ種別
+                <span class="text-ec-orange text-xs ml-1">必須</span>
+              </label>
+              <select
+                id="category"
+                name="category"
+                class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-700 transition-all appearance-none cursor-pointer"
+                required
+              >
+                <option value="" disabled selected>選択してください</option>
+                <option value="service">サービス内容について</option>
+                <option value="price">料金・お見積もりについて</option>
+                <option value="demo">デモ画面を見たい</option>
+                <option value="other">その他</option>
+              </select>
+            </div>
+
+            <!-- お問い合わせ内容 -->
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-bold text-gray-700 mb-2"
+              >
+                お問い合わせ内容
+                <span class="text-ec-orange text-xs ml-1">必須</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="ご自由にご記入ください"
+                class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-700 transition-all"
+                required
+              ></textarea>
+            </div>
+
+            <!-- プライバシーポリシー -->
+            <div class="text-center pt-4">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  required
+                  class="w-5 h-5 text-ec-green rounded border-gray-300 focus:ring-ec-green"
+                />
+                <span class="text-sm text-gray-600">
+                  <a
+                    href="#"
+                    class="text-ec-green underline hover:text-ec-green-dark"
+                    >プライバシーポリシー</a
+                  >に同意する
+                </span>
+              </label>
+            </div>
+
+            <!-- 送信ボタン -->
+            <div class="text-center mt-4">
+              <button
+                type="submit"
+                class="bg-[#F7931E] text-white font-bold px-12 py-4 rounded-full shadow-lg hover:opacity-90 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-lg w-full md:w-auto"
+              >
+                送信する
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-white pb-8 border-t border-gray-100">
+      <div class="max-w-5xl mx-auto px-4 lg:px-8 pt-12">
+        <div class="flex justify-center mb-8">
+          <a href="index.html">
+            <img
+              src="images/common/logo-green.png"
+              alt="EC家計簿"
+              class="h-12 w-auto object-contain"
+            />
+          </a>
+        </div>
+        <div class="text-center text-gray-400 text-xs">© Ritaen 2025</div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menu-btn");
+        const menuClose = document.getElementById("menu-close");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const hamburgerLines = document.querySelectorAll(".hamburger-line");
+        const mobileLinks = document.querySelectorAll(".mobile-link");
+
+        const closeMenu = () => {
+          mobileMenu.classList.add("translate-x-full");
+          mobileMenu.classList.remove("translate-x-0");
+          hamburgerLines.forEach((line) => {
+            line.classList.remove("bg-gray-800");
+            line.classList.add("bg-white");
+          });
+        };
+
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("translate-x-full");
+          mobileMenu.classList.toggle("translate-x-0");
+          if (mobileMenu.classList.contains("translate-x-0")) {
+            hamburgerLines.forEach((line) => {
+              line.classList.remove("bg-white");
+              line.classList.add("bg-gray-800");
+            });
+          } else {
+            closeMenu();
+          }
+        });
+
+        menuClose.addEventListener("click", closeMenu);
+
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+      });
+    </script>
+  </body>
+</html>
