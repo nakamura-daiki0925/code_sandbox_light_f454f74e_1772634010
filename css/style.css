@@ -117,3 +117,33 @@ nav a.active {
     transform: rotate(360deg);
   }
 }
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-200px) translateX(-150px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-40px) translateX(0);
+  }
+  85% {
+    transform: translateY(0) translateX(0);
+  }
+  92% {
+    transform: translateY(-20px) translateX(0);
+  }
+  96% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.nobi-bounce {
+  animation: bounceIn 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
