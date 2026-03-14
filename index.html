@@ -319,16 +319,13 @@
                   class="w-full h-auto object-contain"
                 />
               </div>
-              <div class="flex-1 min-w-0 gap-1">
+              <div class="flex-1 min-w-0">
                 <span
-                  class="inline-block bg-[#F7931E] text-white text-[10px] font-bold px-2 py-0.5 rounded mb-1 whitespace-nowrap"
+                  class="inline-block bg-[#F7931E] text-white font-bold px-2 py-0.5 rounded mb-2 whitespace-nowrap"
                 >
                   期間限定
                 </span>
-                <p
-                  class="text-[#00703C] font-black leading-tight truncate"
-                  style="font-size: clamp(0.9rem, 1.2vw, 1.125rem)"
-                >
+                <p class="text-ec-green-dark font-black leading-tight truncate">
                   無料トライアル実施中
                 </p>
               </div>
@@ -381,7 +378,7 @@
 
           <!-- 左下: ロゴ群 (PC用・絶対配置) -->
           <div
-            class="hidden lg:flex absolute bottom-[17%] xl:bottom-[144px] left-[2%] xl:left-10 items-center gap-4 z-30"
+            class="hidden lg:flex absolute bottom-[17%] xl:bottom-[142px] left-[2%] xl:left-10 items-center gap-4 z-30"
           >
             <div class="w-[124px] h-full">
               <img
@@ -661,12 +658,12 @@
       <!-- CTA Banner -->
       <!-- 変更点: max-w-5xl -> max-w-4xl (全体の幅を狭くする) -->
       <section class="px-4 py-10">
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-3xl mx-auto">
           <a
             href="https://ec-kakeibo.ritaen.com/contact"
             class="group relative flex flex-col lg:flex-row items-center justify-center w-full bg-[#009e46] rounded-[20px] overflow-visible shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 py-10 lg:py-6 gap-8"
             style="
-              background-image: url('images/cta/cta-bg.png');
+              background-image: url('images/hero/hero-bg-gradient.png');
               background-size: cover;
               background-position: center;
             "
@@ -674,7 +671,7 @@
             <!-- テキストエリア -->
             <div class="text-center lg:text-left z-10">
               <p
-                class="text-white/90 text-xs lg:text-sm font-bold mb-2 tracking-wide"
+                class="text-white/90 text-xs lg:text-xl font-bold mb-2 tracking-wide"
               >
                 利益を見える化して再現性のある事業へ
               </p>
@@ -699,7 +696,7 @@
                 class="w-[160px] lg:w-[200px] object-contain relative z-10"
               />
               <div
-                class="absolute -top-2 -right-4 lg:-right-8 z-20 w-20 h-20 rounded-full bg-[#F7931E] flex flex-col items-center justify-center"
+                class="absolute -top-3 -right-4 lg:-right-8 z-20 w-20 h-20 rounded-full bg-[#F7931E] flex flex-col items-center justify-center"
               >
                 <span
                   class="text-white font-black text-lg text-center tracking-widest drop-shadow-sm leading-[1.2] block pt-1"
@@ -877,7 +874,7 @@
                 <img
                   src="images/solution/point1.png"
                   alt="POINT 01"
-                  class="w-12 h-12 object-contain"
+                  class="w-14 h-14 object-contain"
                 />
               </div>
               <p class="text-ec-green-dark font-bold text-sm">
@@ -893,7 +890,7 @@
                 <img
                   src="images/solution/point2.png"
                   alt="POINT 02"
-                  class="w-12 h-12 object-contain"
+                  class="w-14 h-14 object-contain"
                 />
               </div>
               <p class="text-ec-green-dark font-bold text-sm">
@@ -909,7 +906,7 @@
                 <img
                   src="images/solution/point3.png"
                   alt="POINT 03"
-                  class="w-12 h-12 object-contain"
+                  class="w-14 h-14 object-contain"
                 />
               </div>
               <p class="text-ec-green-dark font-bold text-sm">
@@ -918,60 +915,72 @@
             </div>
           </div>
 
-          <p class="text-center text-gray-600 text-sm mb-10 reveal">
-            ネットショップの多くは「売上」だけを追いがちですが、<br />事業を継続的に伸ばすのに重要なのは「利益」です。
+          <p class="text-center text-ec-green-dark text-sm mb-10 reveal">
+            ネットショップの多くは「売上」だけを追いがちですが、<br />事業を継続的に伸ばすのに<strong
+              >重要なのは「利益」</strong
+            >
+            です。
           </p>
 
           <!-- Pain Points -->
           <div
-            class="bg-ec-green-pale border border-ec-green/30 rounded-2xl p-8 flex flex-col lg:flex-row items-center gap-8 reveal"
+            class="relative border-2 border-ec-green rounded-2xl p-10 pt-14 flex flex-col lg:flex-row items-center gap-8 reveal"
           >
+            <!-- タイトル -->
+            <h3
+              class="absolute -top-4 left-1/2 -translate-x-1/2 bg-white px-6 text-ec-green-dark text-ec-green-dark text-xl lg:text-2xl font-bold"
+            >
+              でも、利益管理って実際は大変…
+            </h3>
+
             <div class="flex-1">
-              <h3
-                class="text-ec-green-dark font-black text-lg lg:text-xl mb-5 text-center"
-              >
-                ── でも、利益管理って実際は大変… ──
-              </h3>
-              <ul class="flex flex-col gap-3">
-                <li class="flex items-start gap-3 text-gray-700 text-sm">
+              <ul class="flex flex-col gap-4">
+                <li
+                  class="flex items-start gap-3 text-ec-green-dark text-sm font-bold"
+                >
                   <img
                     src="images/solution/icon-check.png"
-                    alt=""
-                    class="w-5 h-5 object-contain shrink-0 mt-0.5"
+                    class="w-5 h-5 shrink-0 mt-0.5"
                   />
                   エクセル管理が煩雑で、毎日の工数と手入力のミスが多発する…
                 </li>
-                <li class="flex items-start gap-3 text-gray-700 text-sm">
+
+                <li
+                  class="flex items-start gap-3 text-ec-green-dark text-sm font-bold"
+                >
                   <img
                     src="images/solution/icon-check.png"
-                    alt=""
-                    class="w-5 h-5 object-contain shrink-0 mt-0.5"
+                    class="w-5 h-5 shrink-0 mt-0.5"
                   />
                   物流費が増加し、利益を圧迫しているのに見えにくい…
                 </li>
-                <li class="flex items-start gap-3 text-gray-700 text-sm">
+
+                <li
+                  class="flex items-start gap-3 text-ec-green-dark text-sm font-bold"
+                >
                   <img
                     src="images/solution/icon-check.png"
-                    alt=""
-                    class="w-5 h-5 object-contain shrink-0 mt-0.5"
+                    class="w-5 h-5 shrink-0 mt-0.5"
                   />
                   広告費やクーポン費用がバラバラで集計に時間がかかる…
                 </li>
-                <li class="flex items-start gap-3 text-gray-700 text-sm">
+
+                <li
+                  class="flex items-start gap-3 text-ec-green-dark text-sm font-bold"
+                >
                   <img
                     src="images/solution/icon-check.png"
-                    alt=""
-                    class="w-5 h-5 object-contain shrink-0 mt-0.5"
+                    class="w-5 h-5 shrink-0 mt-0.5"
                   />
-                  モールごとに手数料が違い正確な利益計算ができない…
+                  モールごとに手数料率が違い正確な利益計算ができない…
                 </li>
               </ul>
             </div>
+
             <div class="shrink-0">
               <img
                 src="images/nobi-ton/nobi-ton-cry.png"
-                alt="のびとん（困り顔）"
-                class="w-44 h-44 object-contain"
+                class="w-48 h-48 object-contain"
               />
             </div>
           </div>
@@ -1113,7 +1122,7 @@
 
           <!-- 下部テキスト -->
           <p
-            class="text-center text-white/90 text-xs lg:text-sm reveal leading-relaxed"
+            class="text-center text-white/90 text-xs lg:text-sm reveal font-black leading-relaxed"
           >
             もう、エクセルの集計作業に悩む必要はありません。<br />
             利益管理の自動化＝EC 家計簿が解決します。
@@ -1218,7 +1227,6 @@
         </div>
       </section>
 
-      <!-- ========== FLOW SECTION ========== -->
       <!-- ========== FLOW SECTION ========== -->
       <section id="flow" class="py-20 bg-white">
         <div class="max-w-5xl mx-auto px-4 lg:px-8">
@@ -1494,69 +1502,58 @@
       <!-- ========== CAMPAIGN SECTION ========== -->
       <!-- 背景に斜めストライプを追加 -->
       <section
-        class="relative w-full bg-cover bg-center"
+        class="relative w-full bg-contain bg-center bg-no-repeat lg:bg-cover min-h-[320px] lg:min-h-[600px]"
         style="background-image: url('images/refaral/アセット 32@2x.png')"
       >
         <div class="max-w-5xl mx-auto px-4 lg:px-8 py-8 lg:py-16">
-          <!-- ▼ 1. タイトルエリア -->
-          <!-- 
-      画像の上半分（余白部分）に収まるように配置
-      mb-0 にして、下のコンテナとくっつけます
-    -->
           <div
-            class="text-center relative z-10 h-[100px] lg:h-[150px] flex flex-col justify-center"
+            class="text-center relative z-10 py-4 lg:py-12 flex flex-col justify-center"
           >
             <h2
-              class="text-[#00703C] text-2xl lg:text-4xl font-black mb-2 lg:mb-4 tracking-wide"
+              class="text-[#00703C] text-xl sm:text-2xl lg:text-4xl font-black mb-2 lg:mb-4 tracking-wide"
             >
               お友達紹介キャンペーン
             </h2>
+
             <p
-              class="text-[#00703C] text-xs lg:text-base font-bold leading-relaxed px-2"
+              class="text-[#00703C] text-[11px] sm:text-xs lg:text-base font-bold leading-relaxed px-2"
             >
               お友達をご紹介いただくと、紹介者様とお友達に<br
                 class="lg:hidden"
-              />お得なキャンペーン特典をプレゼント！
+              />
+              お得なキャンペーン特典をプレゼント！
             </p>
           </div>
-
-          <!-- ▼ 2. イラスト部分に重なるコンテナ（ここが重要） -->
-          <!-- 
-      aspect-[number]: 画像の縦横比（目視で約 2:1 と仮定）に合わせてボックスを作る
-      これで画像が縮小しても、中の文字の位置がズレません
-    -->
           <div
-            class="relative w-full max-w-[800px] mx-auto aspect-[16/9] lg:aspect-[2/1]"
+            class="relative w-full max-w-[800px] mx-auto h-[300px] sm:h-[340px] lg:h-auto"
           >
             <!-- === 左側：紹介者（白い円の上） === -->
             <div
-              class="absolute top-[45%] left-[28%] -translate-x-[45%] -translate-y-1/2 text-center w-[45%] flex flex-col items-center"
+              class="absolute top-[41%] lg:top-[45%] left-[37%] lg:left-[28%] -translate-x-1/2 -translate-y-1/2 text-center w-[50%] lg:w-[45%] flex flex-col items-center"
             >
               <!-- バッジ -->
               <span
-                class="inline-block bg-[#F7931E] text-white font-bold rounded px-3 py-1 lg:px-6 lg:py-1.5 text-[10px] lg:text-lg mb-1 lg:mb-3 whitespace-nowrap"
+                class="inline-block bg-[#F7931E] text-white font-bold rounded px-2 py-[1px] lg:px-6 lg:py-1.5 text-[clamp(8px,1vw,18px)] mb-1 lg:mb-3 whitespace-nowrap"
               >
                 紹介者
               </span>
 
               <!-- 金額 -->
               <div class="text-[#00703C] font-black leading-none mb-1">
-                <span class="text-[clamp(20px,4vw,56px)]">10,000</span>
-                <span class="text-[clamp(10px,1.5vw,20px)] font-bold"
-                  >円分</span
-                >
+                <span class="text-[clamp(14px,4vw,56px)]">10,000</span>
+                <span class="text-[clamp(7px,1.5vw,20px)] font-bold">円分</span>
               </div>
 
               <!-- ラベル -->
               <p
-                class="text-[#00703C] font-bold text-[clamp(10px,1.8vw,24px)] mb-1 lg:mb-2"
+                class="text-[#00703C] font-bold text-[clamp(8px,1.6vw,24px)] mb-1 lg:mb-2 whitespace-nowrap"
               >
                 クレジット
               </p>
 
               <!-- 注釈 -->
               <p
-                class="text-[#00703C] font-bold text-[clamp(10px,1.8vw,24px)]whitespace-nowrap"
+                class="text-[#00703C] font-bold text-[clamp(7px,1.4vw,22px)] whitespace-nowrap"
               >
                 次回更新時に利用可能
               </p>
@@ -1564,33 +1561,31 @@
 
             <!-- === 右側：お友達（緑の円の上） === -->
             <div
-              class="absolute top-[45%] right-[28%] translate-x-[50%] -translate-y-1/2 text-center w-[45%] flex flex-col items-center"
+              class="absolute top-[41%] lg:top-[45%] right-[37%] lg:right-[28%] translate-x-1/2 -translate-y-1/2 text-center w-[50%] lg:w-[45%] flex flex-col items-center"
             >
               <!-- バッジ -->
               <span
-                class="inline-block bg-[#F7931E] text-white font-bold rounded px-3 py-1 lg:px-6 lg:py-1.5 text-[10px] lg:text-lg mb-1 lg:mb-3 whitespace-nowrap"
+                class="inline-block bg-[#F7931E] text-white font-bold rounded px-2 py-[1px] lg:px-6 lg:py-1.5 text-[clamp(8px,1vw,18px)] mb-1 lg:mb-3 whitespace-nowrap"
               >
                 お友達
               </span>
 
               <!-- 金額 -->
               <div class="text-white font-black leading-none mb-1">
-                <span class="text-[clamp(20px,4vw,56px)]">10,000</span>
-                <span class="text-[clamp(10px,1.5vw,20px)] font-bold"
-                  >円分</span
-                >
+                <span class="text-[clamp(14px,4vw,56px)]">10,000</span>
+                <span class="text-[clamp(7px,1.5vw,20px)] font-bold">円分</span>
               </div>
 
               <!-- ラベル -->
               <p
-                class="text-white font-bold text-[clamp(10px,1.8vw,24px)] mb-1 lg:mb-2"
+                class="text-white font-bold text-[clamp(8px,1.6vw,24px)] mb-1 lg:mb-2 whitespace-nowrap"
               >
                 クレジット
               </p>
 
               <!-- 注釈 -->
               <p
-                class="text-white font-bold text-[clamp(10px,1.8vw,24px)]whitespace-nowrap"
+                class="text-white font-bold text-[clamp(7px,1.4vw,22px)] whitespace-nowrap"
               >
                 初回契約時に利用可能
               </p>
