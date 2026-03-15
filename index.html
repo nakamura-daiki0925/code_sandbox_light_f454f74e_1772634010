@@ -238,30 +238,115 @@
       <!-- ========== HERO SECTION ========== -->
       <section
         id="hero"
-        class="relative w-full h-auto min-h-[600px] lg:h-screen lg:min-h-[700px] overflow-hidden bg-cover bg-center"
+        class="relative w-full overflow-hidden bg-cover bg-center"
         style="background-image: url('images/hero/hero-bg-gradient.png')"
       >
-        <!-- 円弧テキスト画像 -->
-        <div
-          class="absolute top-[42%] left-1/2 lg:left-[28%] xl:left-[30%] -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none w-[85vw] h-[70vw] lg:w-[58vw] lg:h-[48vw] xl:w-[840px] xl:h-[690px] flex items-center justify-center"
-        >
-          <img
-            src="images/hero/hero-arc-text.png"
-            alt=""
-            class="object-contain w-full h-full"
-          />
+        <!-- ========== SP版 (lg未満) ========== -->
+        <div class="flex lg:hidden flex-col items-center pt-20 pb-8 px-4">
+          <!-- キャッチコピー -->
+          <div class="flex flex-col gap-3 items-center text-center mb-6">
+            <div class="bg-[#00622A]/85 px-6 py-2 inline-block">
+              <h1 class="text-white text-2xl tracking-wider whitespace-nowrap">
+                伸びてる店舗は
+              </h1>
+            </div>
+            <div class="bg-[#00622A]/85 px-6 py-2 inline-block">
+              <h1 class="text-white text-2xl tracking-wider whitespace-nowrap">
+                利益も見ている
+              </h1>
+            </div>
+          </div>
+
+          <!-- 円弧テキスト画像 + ブタアイコン -->
+          <div class="relative w-[85vw] h-[70vw] mb-6">
+            <img
+              src="images/hero/hero-arc-text.png"
+              alt=""
+              class="w-full h-full object-contain"
+            />
+            <div class="absolute bottom-[20%] left-1/2 -translate-x-1/2 w-28">
+              <div
+                class="animate__animated animate__bounceInDown"
+                style="animation-duration: 2s"
+              >
+                <img
+                  src="images/common/logo-white3.png"
+                  alt="EC家計簿 キャラクター"
+                  class="w-full h-auto object-contain drop-shadow-md"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 説明文 -->
+          <p
+            class="text-white text-xs leading-relaxed font-medium tracking-wide drop-shadow-lg text-left mb-4"
+          >
+            「EC家計簿」は、楽天市場の売上・手数料・広告費・物流コストを自動で集計し、一目で利益が分かる仕組みを提供します。<br />
+            複雑な計算やエクセル管理の手間をなくし、事業者が本当に注力すべき「戦略」や「商品開発」に集中できる環境をつくります。
+          </p>
+
+          <!-- CTAボタン -->
+          <a
+            href="https://ec-kakeibo.ritaen.com/contact"
+            class="group bg-white rounded-xl p-3 flex items-center gap-4 shadow-xl w-full mb-6"
+          >
+            <div class="w-16 shrink-0">
+              <img
+                src="images/about/laptop-small.png"
+                alt="PC"
+                class="w-full h-auto object-contain"
+              />
+            </div>
+            <div class="flex-1 min-w-0">
+              <span
+                class="inline-block bg-[#F7931E] text-white text-[10px] font-bold px-2 py-0.5 rounded mb-1 whitespace-nowrap"
+              >
+                期間限定
+              </span>
+              <p class="text-[#00703C] font-black text-sm leading-tight">
+                無料トライアル実施中
+              </p>
+            </div>
+            <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+              <i class="fas fa-chevron-right text-[#00703C] text-lg"></i>
+            </div>
+          </a>
+
+          <!-- ロゴ群 -->
+          <div class="flex justify-start items-center gap-4 w-full">
+            <img
+              src="images/common/rakuten-logo.png"
+              alt="Rakuten"
+              class="w-[100px] h-auto"
+            />
+            <img
+              src="images/common/ai-system-badge.png"
+              alt="AI SYSTEM"
+              class="h-10 w-auto"
+            />
+          </div>
         </div>
 
-        <!-- コンテンツレイヤー -->
-        <div
-          class="relative z-20 w-full h-full max-w-[1400px] mx-auto px-4 lg:px-8"
-        >
+        <!-- ========== PC版 (lg以上) ========== -->
+        <div class="hidden lg:block relative h-screen min-h-[700px]">
+          <!-- 円弧テキスト画像 -->
+          <div
+            class="absolute top-[42%] left-[28%] xl:left-[30%] -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none w-[58vw] h-[48vw] xl:w-[840px] xl:h-[690px]"
+          >
+            <img
+              src="images/hero/hero-arc-text.png"
+              alt=""
+              class="object-contain w-full h-full"
+            />
+          </div>
+
           <!-- キャッチコピー -->
           <div
-            class="absolute top-[12%] left-1/2 lg:top-[41%] lg:left-[38%] xl:left-[40%] -translate-x-1/2 -translate-y-1/2 text-center flex flex-col items-center justify-center w-full max-w-2xl"
+            class="absolute top-[41%] left-[38%] xl:left-[40%] -translate-x-1/2 -translate-y-1/2 text-center flex flex-col items-center z-20"
           >
-            <div class="flex flex-col gap-4 mb-4 lg:mb-8 w-full items-center">
-              <div class="bg-[#00622A]/85 opacity-85 px-6 py-2 inline-block">
+            <div class="flex flex-col gap-4 items-center">
+              <div class="bg-[#00622A]/85 px-6 py-2 inline-block">
                 <h1
                   class="text-white tracking-wider whitespace-nowrap"
                   style="font-size: clamp(1.25rem, 2.8vw, 3rem)"
@@ -269,7 +354,7 @@
                   伸びてる店舗は
                 </h1>
               </div>
-              <div class="bg-[#00622A]/85 opacity-85 px-6 py-2 inline-block">
+              <div class="bg-[#00622A]/85 px-6 py-2 inline-block">
                 <h1
                   class="text-white tracking-wider whitespace-nowrap"
                   style="font-size: clamp(1.25rem, 2.8vw, 3rem)"
@@ -282,10 +367,12 @@
 
           <!-- ブタのアイコン -->
           <div
-            class="absolute left-1/2 top-[56%] -translate-x-1/2 lg:left-[14%] xl:left-[17%] lg:top-[47%] lg:translate-x-0 w-36 lg:w-[24vw] xl:w-[340px] h-auto"
+            class="absolute left-[14%] xl:left-[17%] top-[47%] w-[24vw] xl:w-[340px] h-auto z-20"
           >
-            <!-- アニメーション用ラッパー -->
-            <div class="nobi-bounce">
+            <div
+              class="animate__animated animate__bounceInDown"
+              style="animation-duration: 2s"
+            >
               <img
                 src="images/common/logo-white3.png"
                 alt="EC家計簿 キャラクター"
@@ -294,9 +381,9 @@
             </div>
           </div>
 
-          <!-- 右下エリア: 説明文 & CTA (PC用・絶対配置) -->
+          <!-- 右下エリア: 説明文 & CTA -->
           <div
-            class="hidden lg:flex absolute bottom-[32%] right-[10%] xl:right-[14%] w-full max-w-[30vw] xl:max-w-[420px] flex-col gap-6 z-30"
+            class="absolute bottom-[32%] right-[10%] xl:right-[14%] w-full max-w-[30vw] xl:max-w-[420px] flex flex-col gap-6 z-30"
           >
             <p
               class="text-white leading-[1.925] font-medium tracking-wide drop-shadow-lg text-left"
@@ -322,7 +409,7 @@
                 >
                   期間限定
                 </span>
-                <p class="text-ec-green-dark font-black leading-tight truncate">
+                <p class="text-[#00703C] font-black leading-tight truncate">
                   無料トライアル実施中
                 </p>
               </div>
@@ -334,76 +421,21 @@
             </a>
           </div>
 
-          <!-- SP用: 説明文 & CTA (フロー配置) -->
+          <!-- 左下: ロゴ群 -->
           <div
-            class="flex lg:hidden flex-col gap-4 px-4 pt-[95vw] pb-8 z-30 relative"
+            class="absolute bottom-[17%] xl:bottom-[142px] left-[2%] xl:left-10 flex items-center gap-4 z-30"
           >
-            <p
-              class="text-white text-xs leading-relaxed font-medium tracking-wide drop-shadow-lg text-left"
-            >
-              「EC家計簿」は、楽天市場の売上・手数料・広告費・物流コストを自動で集計し、一目で利益が分かる仕組みを提供します。<br />
-              複雑な計算やエクセル管理の手間をなくし、事業者が本当に注力すべき「戦略」や「商品開発」に集中できる環境をつくります。
-            </p>
-            <a
-              href="https://ec-kakeibo.ritaen.com/contact"
-              class="group bg-white rounded-xl p-3 flex items-center gap-4 shadow-xl w-full"
-            >
-              <div class="w-16 shrink-0">
-                <img
-                  src="images/about/laptop-small.png"
-                  alt="PC"
-                  class="w-full h-auto object-contain"
-                />
-              </div>
-              <div class="flex-1 min-w-0">
-                <span
-                  class="inline-block bg-[#F7931E] text-white text-[10px] font-bold px-2 py-0.5 rounded mb-1 whitespace-nowrap"
-                >
-                  期間限定
-                </span>
-                <p class="text-[#00703C] font-black text-sm leading-tight">
-                  無料トライアル実施中
-                </p>
-              </div>
-              <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                <i
-                  class="fas fa-chevron-right text-[#00703C] text-lg group-hover:translate-x-1 transition-transform"
-                ></i>
-              </div>
-            </a>
-          </div>
-
-          <!-- 左下: ロゴ群 (PC用・絶対配置) -->
-          <div
-            class="hidden lg:flex absolute bottom-[17%] xl:bottom-[142px] left-[2%] xl:left-10 items-center gap-4 z-30"
-          >
-            <div class="w-[124px] h-full">
+            <div class="w-[124px]">
               <img
                 src="images/common/rakuten-logo.png"
                 alt="Rakuten"
-                class="w-full h-full"
+                class="w-full h-auto"
               />
             </div>
             <img
               src="images/common/ai-system-badge.png"
               alt="AI SYSTEM"
               class="h-14 w-auto"
-            />
-          </div>
-
-          <!-- SP用: ロゴ群 (フロー配置) -->
-          <div
-            class="flex lg:hidden justify-start items-center gap-4 px-4 pb-8 relative z-30"
-          >
-            <img
-              src="images/common/rakuten-logo.png"
-              alt="Rakuten"
-              class="w-[100px] h-auto"
-            />
-            <img
-              src="images/common/ai-system-badge.png"
-              alt="AI SYSTEM"
-              class="h-10 w-auto"
             />
           </div>
         </div>
