@@ -147,3 +147,39 @@ nav a.active {
 .nobi-bounce {
   animation: bounceIn 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
+.section-title {
+  position: relative;
+  display: inline-block; /* 文字幅に合わせる */
+  padding-bottom: 14px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 110%; /* 100%で文字と同じ、110〜120%で少し長め */
+  height: 4px;
+  background: #f7931e; /* bg-ec-orange 相当 */
+  border-radius: 9999px;
+
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+}
+
+/* 表示時に伸びる */
+.reveal.visible .section-title::after {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+}
+
+/* 動きを減らしたい環境向け */
+@media (prefers-reduced-motion: reduce) {
+  .section-title::after {
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s,
+      opacity 0.3s ease 0.2s;
+  }
+}
