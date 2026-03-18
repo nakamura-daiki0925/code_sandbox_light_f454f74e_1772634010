@@ -64,11 +64,11 @@
           href="#"
           class="flex items-center shrink-0 hover:opacity-80 transition-opacity"
         >
-          <img
-            src="images/common/logo-white3.png"
-            alt="EC家計簿"
-            class="class=h-12 lg:h-14"
-          />
+        <img
+        src="images/common/logo-white3.png"
+        alt="EC家計簿"
+        class="h-14 w-auto object-contain"
+      />
         </a>
 
         <nav
@@ -231,88 +231,108 @@
         class="relative w-full overflow-hidden bg-cover bg-center"
         style="background-image: url('images/hero/hero-bg-gradient.png')"
       >
-        <div class="flex lg:hidden flex-col items-center pt-20 pb-8 px-4">
-          <div class="flex flex-col gap-3 items-center text-center mb-6">
-            <div class="bg-[#00622A]/85 px-6 py-2 inline-block">
-              <h1 class="text-white text-2xl tracking-wider whitespace-nowrap font">
-                伸びてる店舗は
-              </h1>
-            </div>
-            <div class="bg-[#00622A]/85 px-6 py-2 inline-block">
-              <h1 class="text-white text-2xl tracking-wider whitespace-nowrap">
-                利益も見ている
-              </h1>
-            </div>
-          </div>
-
-          <div class="relative w-[85vw] h-[70vw] mb-6">
-            <img
-              src="images/hero/hero-arc-text.png"
-              alt=""
-              class="w-full h-full object-contain"
-            />
-            <div class="absolute bottom-[20%] left-1/2 -translate-x-1/2 w-28">
-              <div
-                class="animate__animated animate__bounceInDown"
-                style="animation-duration: 2s"
-              >
-                <img
-                  src="images/common/logo-white3.png"
-                  alt="EC家計簿 キャラクター"
-                  class="w-full h-auto object-contain drop-shadow-md"
-                />
-              </div>
-            </div>
-          </div>
-
-          <p
-            class="text-white text-xs leading-relaxed font-medium tracking-wide drop-shadow-lg text-left mb-4"
-          >
-            「EC家計簿」は、楽天市場の売上・手数料・広告費・物流コストを自動で集計し、<br class="block lg:hidden" />一目で利益が分かる仕組みを提供します。<br />
-            複雑な計算やエクセル管理の手間をなくし、<br class="block lg:hidden" />事業者が本当に注力すべき「戦略」や「商品開発」に集中できる環境をつくります。
-          </p>
-
-          <a
-            href="https://ec-kakeibo.ritaen.com/contact"
-            class="group bg-white rounded-xl p-3 flex items-center gap-4 shadow-xl w-full mb-6"
-          >
-            <div class="w-16 shrink-0">
+      <div class="flex lg:hidden flex-col items-center px-4 pt-24 sm:pt-28 pb-10">
+        <!-- Copy -->
+        <h1 class="hero-copy reveal flex flex-col gap-3 items-center text-center mb-8">
+          <span class="hero-copy-line bg-[#00622A]/85 px-5 py-1 inline-block rounded-sm">
+            <span
+              class="block text-white tracking-wider whitespace-nowrap font-line font-extrabold text-[clamp(1.5rem,6vw,2rem)]"
+            >
+              伸びてる店舗は
+            </span>
+          </span>
+      
+          <span class="hero-copy-line bg-[#00622A]/85 px-5 py-2.5 inline-block rounded-sm">
+            <span
+              class="block text-white tracking-wider whitespace-nowrap font-line font-extrabold text-[clamp(1.5rem,6vw,2rem)]"
+            >
+              利益も見ている
+            </span>
+          </span>
+        </h1>
+      
+        <!-- Visual -->
+        <div class="relative w-[92vw] max-w-[400px] aspect-[1/0.82] mb-2">
+          <img
+            src="images/hero/hero-arc-text.png"
+            alt=""
+            class="w-full h-full object-contain"
+          />
+        
+          <div class="absolute bottom-[17%] left-1/2 -translate-x-1/2 w-32 sm:w-36">
+            <div
+              class="animate__animated animate__bounceInDown"
+              style="animation-duration: 2s"
+            >
               <img
-                src="images/about/laptop-small.png"
-                alt="PC"
-                class="w-full h-auto object-contain"
+                src="images/common/logo-white3.png"
+                alt="EC家計簿 キャラクター"
+                class="w-full h-auto object-contain drop-shadow-md"
               />
             </div>
-            <div class="flex-1 min-w-0">
-              <span
-                class="inline-block bg-[#F7931E] text-white text-[10px] font-bold px-2 py-0.5 rounded mb-1 whitespace-nowrap"
-              >
-                期間限定
-              </span>
-              <p class="text-[#00703C] font-black text-sm leading-tight">
-                無料トライアル実施中
-              </p>
-            </div>
-            <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-              <i class="fas fa-chevron-right text-[#00703C] text-lg"></i>
-            </div>
-            
-
-          </a>
-
-          <div class="flex justify-start items-center gap-4 w-full">
+          </div>
+        </div>
+        
+      
+        <!-- Description -->
+        <p
+          class="max-w-[340px] text-white text-[13px] leading-[1.9] font-medium tracking-wide drop-shadow-lg text-left mb-6"
+        >
+          「EC家計簿」は、楽天市場の売上・手数料・広告費・物流コストを自動で集計し、
+          一目で利益が分かる仕組みを提供します。<br />
+          複雑な計算やエクセル管理の手間をなくし、
+          事業者が本当に注力すべき「戦略」や「商品開発」に集中できる環境をつくります。
+        </p>
+      
+        <!-- CTA -->
+        <a
+          href="https://ec-kakeibo.ritaen.com/contact"
+          class="group bg-white rounded-xl p-3 flex items-center gap-3 shadow-xl w-full max-w-[320px] sm:max-w-[340px] mx-auto mb-5"
+        >
+          <div class="w-14 sm:w-16 shrink-0">
+            <img
+              src="images/about/laptop-small.png"
+              alt="PC"
+              class="w-full h-auto object-contain"
+            />
+          </div>
+      
+          <div class="flex-1 min-w-0">
+            <span
+              class="inline-block bg-[#F7931E] text-white text-[10px] font-bold px-2 py-0.5 rounded mb-1 whitespace-nowrap"
+            >
+              期間限定
+            </span>
+            <p class="text-[#00703C] font-extrabold text-sm sm:text-base leading-tight">
+              無料トライアル実施中
+            </p>
+          </div>
+      
+          <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+            <i class="fas fa-chevron-right text-[#00703C] text-lg"></i>
+          </div>
+        </a>
+      
+        <!-- Logos / Badges -->
+        <div class="w-full flex justify-center">
+          <div
+            class="inline-flex items-center gap-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md px-8 py-3.5 shadow-sm"
+          >
             <img
               src="images/common/rakuten-logo.png"
               alt="Rakuten"
-              class="w-[100px] h-auto"
+              class="h-7 w-auto object-contain"
             />
+            <span class="w-px h-7 bg-white/30"></span>
             <img
               src="images/common/ai-system-badge.png"
               alt="AI SYSTEM"
-              class="h-10 w-auto"
+              class="h-8 w-auto object-contain"
             />
           </div>
         </div>
+      </div>
+      
 
         <div class="hidden lg:block relative h-screen min-h-[700px]">
           <div
@@ -638,7 +658,7 @@
         <div class="max-w-3xl mx-auto">
           <a
             href="https://ec-kakeibo.ritaen.com/contact"
-            class="group relative flex flex-col lg:flex-row items-center justify-center w-full bg-[#009e46] rounded-[20px] overflow-visible shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 py-10 lg:py-6 gap-8"
+            class="group relative flex flex-col lg:flex-row items-center justify-center w-full bg-[#00703C] rounded-[20px] overflow-visible shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 py-10 lg:py-6 gap-8"
             style="
               background-image: url('images/hero/hero-bg-gradient.png');
               background-size: cover;
@@ -708,7 +728,8 @@
           </div>
           <div class="w-full reveal">
             <div
-              class="max-w-5xl mx-auto bg-[#067f38] rounded-[20px] shadow-xl overflow-hidden text-white border border-white/30"
+              class="max-w-5xl mx-auto rounded-[20px] shadow-xl overflow-hidden text-white border border-white/30"
+              style="background-image: url('images/hero/hero-bg-gradient.png'); background-size: cover; background-position: center;"
             >
               <div class="grid grid-cols-1 lg:grid-cols-2">
                 <div
@@ -836,61 +857,72 @@
             です。
           </p>
 
-          <div
-            class="relative border-2 border-ec-green rounded-2xl p-10 pt-14 flex flex-col lg:flex-row items-center gap-8 reveal"
+    <h3
+          class="block lg:hidden text-center text-ec-green-dark text-xl font-bold mb-4 reveal"
+        >
+          でも、利益管理って実際は大変…
+        </h3>
+
+        <div
+          class="relative border-2 border-ec-green rounded-2xl p-6 lg:p-10 pt-8 lg:pt-14 flex flex-col lg:flex-row items-center gap-4 lg:gap-8 reveal"
+        >
+          <h3
+            class="hidden lg:block absolute -top-4 left-1/2 -translate-x-1/2 bg-white px-6 text-ec-green-dark text-2xl font-bold whitespace-nowrap"
           >
-            <h3
-              class="absolute -top-4 left-1/2 -translate-x-1/2 bg-white px-6 text-ec-green-dark text-ec-green-dark text-xl lg:text-2xl font-bold"
-            >
-              でも、利益管理って実際は大変…
-            </h3>
-            <div class="flex-1">
-              <ul class="flex flex-col gap-4">
-                <li
-                  class="flex items-start gap-3 text-ec-green-dark text-sm font-bold"
-                >
-                  <img
-                    src="images/solution/icon-check.png"
-                    class="w-5 h-5 shrink-0 mt-0.5"
-                  />
-                  <span>エクセル管理が煩雑で、<br class="block lg:hidden" />毎日の工数と手入力のミスが多発する…</span>
-                </li>
-                <li
-                  class="flex items-start gap-3 text-ec-green-dark text-sm font-bold"
-                >
-                  <img
-                    src="images/solution/icon-check.png"
-                    class="w-5 h-5 shrink-0 mt-0.5"
-                  />
-                  <span>物流費が増加し、<br class="block lg:hidden" />利益を圧迫しているのに見えにくい…</span>
-                </li>
-                <li
-                  class="flex items-start gap-3 text-ec-green-dark text-sm font-bold"
-                >
-                  <img
-                    src="images/solution/icon-check.png"
-                    class="w-5 h-5 shrink-0 mt-0.5"
-                  />
-                  <span>広告費やクーポン費用がバラバラで<br class="block lg:hidden" />集計に時間がかかる…</span>
-                </li>
-                <li
-                  class="flex items-start gap-3 text-ec-green-dark text-sm font-bold"
-                >
-                  <img
-                    src="images/solution/icon-check.png"
-                    class="w-5 h-5 shrink-0 mt-0.5"
-                  />
-                  <span>モールごとに手数料率が違い<br class="block lg:hidden" />正確な利益計算ができない…</span>
-                </li>
-              </ul>
-            </div>
-            <div class="shrink-0">
-              <img
-                src="images/nobi-ton/nobi-ton-cry.png"
-                class="w-48 h-48 object-contain"
-              />
-            </div>
+            でも、利益管理って実際は大変…
+          </h3>
+
+          <div class="flex-1 w-full flex justify-center lg:justify-start">
+            <ul class="flex flex-col gap-4">
+              <li
+                class="flex items-start gap-3 text-ec-green-dark text-sm lg:text-base font-bold"
+              >
+                <img
+                  src="images/solution/icon-check.png"
+                  class="w-5 h-5 shrink-0 mt-0.5"
+                />
+                <span class="text-left">エクセル管理が煩雑で、<br class="block lg:hidden" />毎日の工数と手入力のミスが多発する…</span>
+              </li>
+
+              <li
+                class="flex items-start gap-3 text-ec-green-dark text-sm lg:text-base font-bold"
+              >
+                <img
+                  src="images/solution/icon-check.png"
+                  class="w-5 h-5 shrink-0 mt-0.5"
+                />
+                <span class="text-left">物流費が増加し、<br class="block lg:hidden" />利益を圧迫しているのに見えにくい…</span>
+              </li>
+
+              <li
+                class="flex items-start gap-3 text-ec-green-dark text-sm lg:text-base font-bold"
+              >
+                <img
+                  src="images/solution/icon-check.png"
+                  class="w-5 h-5 shrink-0 mt-0.5"
+                />
+                <span class="text-left">広告費やクーポン費用がバラバラで<br class="block lg:hidden" />集計に時間がかかる…</span>
+              </li>
+
+              <li
+                class="flex items-start gap-3 text-ec-green-dark text-sm lg:text-base font-bold"
+              >
+                <img
+                  src="images/solution/icon-check.png"
+                  class="w-5 h-5 shrink-0 mt-0.5"
+                />
+                <span class="text-left">モールごとに手数料率が違い<br class="block lg:hidden" />正確な利益計算ができない…</span>
+              </li>
+            </ul>
           </div>
+
+          <div class="shrink-0 flex justify-center w-full lg:w-auto -mt-4 lg:mt-0 lg:-ml-6">
+            <img
+              src="images/nobi-ton/nobi-ton-cry.png"
+              class="w-48 h-48 lg:w-56 lg:h-56 object-contain transform scale-125 lg:scale-[1.3] origin-center"
+            />
+          </div>
+        </div>
         </div>
       </section>
 
@@ -1454,87 +1486,87 @@
       
 
       <section
-        class="relative w-full bg-contain bg-center bg-no-repeat lg:bg-cover min-h-[320px] lg:min-h-[600px]"
-        style="background-image: url('images/refaral/アセット 32@2x.png')"
-      >
-        <div class="max-w-5xl mx-auto px-4 lg:px-8 py-8 lg:py-16">
-          <div
-            class="text-center relative z-10 py-4 lg:py-12 flex flex-col justify-center"
+      class="relative w-full bg-cover bg-center bg-no-repeat min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]"
+      style="background-image: url('images/refaral/アセット 32@2x.png')"
+    >
+      <div class="max-w-5xl mx-auto px-4 lg:px-8 py-8 lg:py-16">
+        <div
+          class="text-center relative z-10 py-4 lg:py-12 flex flex-col justify-center"
+        >
+          <h2
+            class="text-[#00703C] text-xl sm:text-2xl lg:text-2xl font-black mb-2 lg:mb-4 tracking-wide"
           >
-            <h2
-              class="text-[#00703C] text-xl sm:text-2xl lg:text-4xl font-black mb-2 lg:mb-4 tracking-wide"
+            お友達紹介キャンペーン
+          </h2>
+    
+          <p
+            class="text-[#00703C] text-[11px] sm:text-xs lg:text-base font-bold leading-relaxed px-2"
+          >
+            お友達をご紹介いただくと、紹介者様とお友達に<br
+              class="block lg:hidden"
+            />
+            お得なキャンペーン特典をプレゼント！
+          </p>
+        </div>
+        <div
+          class="relative w-full max-w-[800px] mx-auto h-[300px] sm:h-[340px] lg:h-auto"
+        >
+          <div
+            class="absolute top-[41%] lg:top-[45%] left-[37%] lg:left-[28%] -translate-x-1/2 -translate-y-1/2 text-center w-[50%] lg:w-[45%] flex flex-col items-center"
+          >
+            <span
+              class="inline-block bg-[#F7931E] text-white font-bold rounded px-2 py-[1px] lg:px-6 lg:py-1.5 text-[clamp(8px,1vw,18px)] mb-1 lg:mb-3 whitespace-nowrap"
             >
-              お友達紹介キャンペーン
-            </h2>
-
+              紹介者
+            </span>
+    
+            <div class="text-[#00703C] font-black leading-none mb-1">
+              <span class="text-[clamp(14px,4vw,56px)]">10,000</span>
+              <span class="text-[clamp(7px,1.5vw,20px)] font-bold">円分</span>
+            </div>
+    
             <p
-              class="text-[#00703C] text-[11px] sm:text-xs lg:text-base font-bold leading-relaxed px-2"
+              class="text-[#00703C] font-bold text-[clamp(8px,1.6vw,24px)] mb-1 lg:mb-2 whitespace-nowrap"
             >
-              お友達をご紹介いただくと、紹介者様とお友達に<br
-                class="block lg:hidden"
-              />
-              お得なキャンペーン特典をプレゼント！
+              クレジット
+            </p>
+    
+            <p
+              class="text-[#00703C] font-bold text-[clamp(7px,1.4vw,22px)] whitespace-nowrap"
+            >
+              次回更新時に利用可能
             </p>
           </div>
+    
           <div
-            class="relative w-full max-w-[800px] mx-auto h-[300px] sm:h-[340px] lg:h-auto"
+            class="absolute top-[41%] lg:top-[45%] right-[37%] lg:right-[28%] translate-x-1/2 -translate-y-1/2 text-center w-[50%] lg:w-[45%] flex flex-col items-center"
           >
-            <div
-              class="absolute top-[41%] lg:top-[45%] left-[37%] lg:left-[28%] -translate-x-1/2 -translate-y-1/2 text-center w-[50%] lg:w-[45%] flex flex-col items-center"
+            <span
+              class="inline-block bg-[#F7931E] text-white font-bold rounded px-2 py-[1px] lg:px-6 lg:py-1.5 text-[clamp(8px,1vw,18px)] mb-1 lg:mb-3 whitespace-nowrap"
             >
-              <span
-                class="inline-block bg-[#F7931E] text-white font-bold rounded px-2 py-[1px] lg:px-6 lg:py-1.5 text-[clamp(8px,1vw,18px)] mb-1 lg:mb-3 whitespace-nowrap"
-              >
-                紹介者
-              </span>
-
-              <div class="text-[#00703C] font-black leading-none mb-1">
-                <span class="text-[clamp(14px,4vw,56px)]">10,000</span>
-                <span class="text-[clamp(7px,1.5vw,20px)] font-bold">円分</span>
-              </div>
-
-              <p
-                class="text-[#00703C] font-bold text-[clamp(8px,1.6vw,24px)] mb-1 lg:mb-2 whitespace-nowrap"
-              >
-                クレジット
-              </p>
-
-              <p
-                class="text-[#00703C] font-bold text-[clamp(7px,1.4vw,22px)] whitespace-nowrap"
-              >
-                次回更新時に利用可能
-              </p>
+              お友達
+            </span>
+    
+            <div class="text-white font-black leading-none mb-1">
+              <span class="text-[clamp(14px,4vw,56px)]">10,000</span>
+              <span class="text-[clamp(7px,1.5vw,20px)] font-bold">円分</span>
             </div>
-
-            <div
-              class="absolute top-[41%] lg:top-[45%] right-[37%] lg:right-[28%] translate-x-1/2 -translate-y-1/2 text-center w-[50%] lg:w-[45%] flex flex-col items-center"
+    
+            <p
+              class="text-white font-bold text-[clamp(8px,1.6vw,24px)] mb-1 lg:mb-2 whitespace-nowrap"
             >
-              <span
-                class="inline-block bg-[#F7931E] text-white font-bold rounded px-2 py-[1px] lg:px-6 lg:py-1.5 text-[clamp(8px,1vw,18px)] mb-1 lg:mb-3 whitespace-nowrap"
-              >
-                お友達
-              </span>
-
-              <div class="text-white font-black leading-none mb-1">
-                <span class="text-[clamp(14px,4vw,56px)]">10,000</span>
-                <span class="text-[clamp(7px,1.5vw,20px)] font-bold">円分</span>
-              </div>
-
-              <p
-                class="text-white font-bold text-[clamp(8px,1.6vw,24px)] mb-1 lg:mb-2 whitespace-nowrap"
-              >
-                クレジット
-              </p>
-
-              <p
-                class="text-white font-bold text-[clamp(7px,1.4vw,22px)] whitespace-nowrap"
-              >
-                初回契約時に利用可能
-              </p>
-            </div>
+              クレジット
+            </p>
+    
+            <p
+              class="text-white font-bold text-[clamp(7px,1.4vw,22px)] whitespace-nowrap"
+            >
+              初回契約時に利用可能
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <section id="faq" class="py-20 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 lg:px-8">
