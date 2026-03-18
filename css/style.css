@@ -183,3 +183,54 @@ nav a.active {
       opacity 0.3s ease 0.2s;
   }
 }
+
+
+/* このブロックは通常のreveal(下からふわっ)を無効化して、
+   子要素だけアニメーションさせる */
+   .hero-copy.reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  
+  /* 1行ごとの初期状態 */
+  .hero-copy-line {
+    overflow: hidden;
+    opacity: 0;
+    clip-path: inset(0 100% 0 0); /* 左から右へ見せる */
+    transform: translateX(-24px);
+    will-change: clip-path, transform, opacity;
+  }
+  
+  /* 表示時 */
+  .hero-copy.visible .hero-copy-line {
+    animation: heroLineReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  
+  /* 2行目を少し遅らせる */
+  .hero-copy.visible .hero-copy-line:nth-child(2) {
+    animation-delay: 0.18s;
+  }
+  
+  @keyframes heroLineReveal {
+    0% {
+      opacity: 0;
+      clip-path: inset(0 100% 0 0);
+      transform: translateX(-24px);
+    }
+    100% {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+      transform: translateX(0);
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .hero-copy-line {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+      transform: none;
+      animation: none !important;
+    }
+  }
+  

@@ -44,12 +44,10 @@
     </script>
   </head>
   <body class="font-line bg-white overflow-x-hidden">
-    <!-- ========== HEADER ========== -->
     <header
       id="header"
       class="fixed top-0 left-0 w-full z-50 text-white transition-all duration-300"
     >
-      <!-- 背景画像レイヤー -->
       <div
         class="absolute inset-0 z-0 opacity-90 shadow-sm"
         style="
@@ -59,11 +57,9 @@
         "
       ></div>
 
-      <!-- コンテンツレイヤー -->
       <div
         class="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between h-16 lg:h-20"
       >
-        <!-- Logo -->
         <a
           href="#"
           class="flex items-center shrink-0 hover:opacity-80 transition-opacity"
@@ -75,7 +71,6 @@
           />
         </a>
 
-        <!-- Navigation (PC) -->
         <nav
           class="hidden lg:flex items-center gap-6 text-sm tracking-wide font-medium"
         >
@@ -98,7 +93,6 @@
           >
         </nav>
 
-        <!-- CTA Buttons (PC) -->
         <div class="hidden lg:flex items-center gap-3">
           <a
             href="#"
@@ -114,7 +108,6 @@
           </a>
         </div>
 
-        <!-- Hamburger (Mobile) -->
         <button
           id="menu-btn"
           class="lg:hidden flex flex-col gap-1.5 p-2 z-50 relative"
@@ -132,12 +125,10 @@
         </button>
       </div>
 
-      <!-- Mobile Menu -->
       <div
         id="mobile-menu"
         class="fixed top-0 right-0 h-full w-64 bg-white shadow-xl flex flex-col px-6 py-8 gap-4 z-50 translate-x-full transition-transform duration-300 md:hidden"
       >
-        <!-- 閉じるボタン -->
         <button
           id="menu-close"
           class="self-end text-gray-500 hover:text-gray-800 mb-2"
@@ -235,15 +226,12 @@
     </script>
 
     <main>
-      <!-- ========== HERO SECTION ========== -->
       <section
         id="hero"
         class="relative w-full overflow-hidden bg-cover bg-center"
         style="background-image: url('images/hero/hero-bg-gradient.png')"
       >
-        <!-- ========== SP版 (lg未満) ========== -->
         <div class="flex lg:hidden flex-col items-center pt-20 pb-8 px-4">
-          <!-- キャッチコピー -->
           <div class="flex flex-col gap-3 items-center text-center mb-6">
             <div class="bg-[#00622A]/85 px-6 py-2 inline-block">
               <h1 class="text-white text-2xl tracking-wider whitespace-nowrap">
@@ -257,7 +245,6 @@
             </div>
           </div>
 
-          <!-- 円弧テキスト画像 + ブタアイコン -->
           <div class="relative w-[85vw] h-[70vw] mb-6">
             <img
               src="images/hero/hero-arc-text.png"
@@ -278,15 +265,13 @@
             </div>
           </div>
 
-          <!-- 説明文 -->
           <p
             class="text-white text-xs leading-relaxed font-medium tracking-wide drop-shadow-lg text-left mb-4"
           >
-            「EC家計簿」は、楽天市場の売上・手数料・広告費・物流コストを自動で集計し、一目で利益が分かる仕組みを提供します。<br />
-            複雑な計算やエクセル管理の手間をなくし、事業者が本当に注力すべき「戦略」や「商品開発」に集中できる環境をつくります。
+            「EC家計簿」は、楽天市場の売上・手数料・広告費・物流コストを自動で集計し、<br class="block lg:hidden" />一目で利益が分かる仕組みを提供します。<br />
+            複雑な計算やエクセル管理の手間をなくし、<br class="block lg:hidden" />事業者が本当に注力すべき「戦略」や「商品開発」に集中できる環境をつくります。
           </p>
 
-          <!-- CTAボタン -->
           <a
             href="https://ec-kakeibo.ritaen.com/contact"
             class="group bg-white rounded-xl p-3 flex items-center gap-4 shadow-xl w-full mb-6"
@@ -313,7 +298,6 @@
             </div>
           </a>
 
-          <!-- ロゴ群 -->
           <div class="flex justify-start items-center gap-4 w-full">
             <img
               src="images/common/rakuten-logo.png"
@@ -328,9 +312,7 @@
           </div>
         </div>
 
-        <!-- ========== PC版 (lg以上) ========== -->
         <div class="hidden lg:block relative h-screen min-h-[700px]">
-          <!-- 円弧テキスト画像 -->
           <div
             class="absolute top-[42%] left-[28%] xl:left-[30%] -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none w-[58vw] h-[48vw] xl:w-[840px] xl:h-[690px]"
           >
@@ -341,31 +323,31 @@
             />
           </div>
 
-          <!-- キャッチコピー -->
           <div
             class="absolute top-[41%] left-[38%] xl:left-[40%] -translate-x-1/2 -translate-y-1/2 text-center flex flex-col items-center z-20"
           >
-            <div class="flex flex-col gap-4 items-center">
-              <div class="bg-[#00622A]/85 px-6 py-2 inline-block">
-                <h1
-                  class="text-white tracking-wider whitespace-nowrap"
-                  style="font-size: clamp(1.25rem, 2.8vw, 3rem)"
-                >
-                  伸びてる店舗は
-                </h1>
-              </div>
-              <div class="bg-[#00622A]/85 px-6 py-2 inline-block">
-                <h1
-                  class="text-white tracking-wider whitespace-nowrap"
-                  style="font-size: clamp(1.25rem, 2.8vw, 3rem)"
-                >
-                  利益も見ている
-                </h1>
-              </div>
+          <div class="hero-copy reveal flex flex-col gap-4 items-center">
+            <div class="hero-copy-line bg-[#00622A]/85 px-6 py-2 inline-block">
+              <p
+                class="text-white tracking-wider whitespace-nowrap"
+                style="font-size: clamp(1.25rem, 2.8vw, 3rem)"
+              >
+                伸びてる店舗は
+              </p>
+            </div>
+          
+            <div class="hero-copy-line bg-[#00622A]/85 px-6 py-2 inline-block">
+              <p
+                class="text-white tracking-wider whitespace-nowrap"
+                style="font-size: clamp(1.25rem, 2.8vw, 3rem)"
+              >
+                利益も見ている
+              </p>
             </div>
           </div>
+          
+          </div>
 
-          <!-- ブタのアイコン -->
           <div
             class="absolute left-[14%] xl:left-[17%] top-[47%] w-[24vw] xl:w-[340px] h-auto z-20"
           >
@@ -381,7 +363,6 @@
             </div>
           </div>
 
-          <!-- 右下エリア: 説明文 & CTA -->
           <div
             class="absolute bottom-[32%] right-[10%] xl:right-[14%] w-full max-w-[30vw] xl:max-w-[420px] flex flex-col gap-6 z-30"
           >
@@ -421,7 +402,6 @@
             </a>
           </div>
 
-          <!-- 左下: ロゴ群 -->
           <div
             class="absolute bottom-[17%] xl:bottom-[142px] left-[2%] xl:left-10 flex items-center gap-4 z-30"
           >
@@ -441,10 +421,8 @@
         </div>
       </section>
 
-      <!-- ========== WHAT IS EC KAKEIBO ========== -->
       <section id="about" class="py-20 bg-white">
         <div class="max-w-5xl mx-auto px-4 lg:px-8">
-          <!-- Section Header -->
           <div class="text-center mb-12 reveal">
             <p class="text-gray-400 text-sm tracking-widest mb-1">
               What is EC Kakeibo?
@@ -460,9 +438,7 @@
           <div
             class="relative w-full max-w-[1000px] mx-auto bg-[#f7f7f7] rounded-[20px] overflow-hidden"
           >
-            <!-- ========== PC用 ========== -->
             <div class="hidden lg:block h-[400px]">
-              <!-- テキストグループ (左側) -->
               <div class="absolute top-[60px] left-[60px] z-10">
                 <p class="text-[#00703C] text-2xl font-bold mb-4">
                   楽天市場専用の
@@ -491,14 +467,12 @@
                 />
               </div>
 
-              <!-- ノートPC画像 (右側) -->
               <img
                 src="images/about/laptop-dashboard.png"
                 alt="EC家計簿ダッシュボード"
                 class="absolute top-[40px] right-[40px] w-[500px] h-auto object-contain z-20 drop-shadow-xl"
               />
 
-              <!-- のびとんバッジ (右下) -->
               <div
                 class="absolute bottom-[20px] right-[20px] z-30 w-[180px] h-[180px] bg-[#dcfce7] rounded-full shadow-lg border-4 border-white text-[#00703C] overflow-hidden"
               >
@@ -520,11 +494,9 @@
               </div>
             </div>
 
-            <!-- ========== SP用 ========== -->
             <div
               class="flex lg:hidden flex-col items-center gap-3 p-4 relative"
             >
-              <!-- テキストグループ -->
               <div class="w-full text-center">
                 <p class="text-[#00703C] text-lg font-bold mb-3">
                   楽天市場専用の
@@ -548,14 +520,12 @@
                 </h2>
               </div>
 
-              <!-- PC画像 + Rakutenロゴ -->
               <div class="relative w-full">
                 <img
                   src="images/about/laptop-dashboard.png"
                   alt="EC家計簿ダッシュボード"
                   class="w-full max-w-[320px] h-auto object-contain drop-shadow-xl mx-auto"
                 />
-                <!-- Rakutenロゴ: 左下 -->
                 <img
                   src="images/common/rakuten-logo.png"
                   alt="Rakuten"
@@ -563,7 +533,6 @@
                 />
               </div>
 
-              <!-- のびとんバッジ: カード全体の右下 -->
               <div
                 class="absolute bottom-4 right-4 w-[110px] h-[110px] bg-[#dcfce7] rounded-full shadow-lg border-4 border-white text-[#00703C] overflow-hidden"
               >
@@ -581,36 +550,11 @@
               </div>
             </div>
           </div>
-
-          <!-- Video Section -->
-          <div class="text-center reveal">
-            <div class="flex items-center justify-center gap-3 my-6">
-              <span class="text-ec-green-dark">＼</span>
-              <p class="text-ec-green-dark font-bold text-base lg:text-lg">
-                1分でわかる『EC家計簿』
-              </p>
-              <span class="text-ec-green-dark">／</span>
-            </div>
-            <div
-              class="max-w-2xl mx-auto bg-gray-900 rounded-xl aspect-video flex items-center justify-center shadow-xl"
-            >
-              <div class="text-center">
-                <div
-                  class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-3 cursor-pointer hover:bg-white/30 transition-colors"
-                >
-                  <i class="fas fa-play text-white text-xl ml-1"></i>
-                </div>
-                <p class="text-white/60 text-sm">動画を再生</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
-      <!-- ========== POINT SECTIONS ========== -->
       <section id="points" class="py-20 bg-white">
         <div class="max-w-5xl mx-auto px-4 lg:px-8 flex flex-col gap-20">
-          <!-- Point 1 -->
           <div
             class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 reveal"
           >
@@ -636,7 +580,6 @@
             </div>
           </div>
 
-          <!-- Point 2 -->
           <div
             class="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12 reveal"
           >
@@ -650,7 +593,7 @@
                 利益管理の工数が大幅削減
               </h3>
               <p class="text-gray-600 text-sm lg:text-base">
-                店舗別・商品別・SKU 単位まで、正確な利益を自動で一元可視化。
+                店舗別・商品別・SKU 単位まで、<br class="block lg:hidden" />正確な利益を自動で一元可視化。
               </p>
             </div>
             <div class="flex-1 flex justify-center">
@@ -662,7 +605,6 @@
             </div>
           </div>
 
-          <!-- Point 3 -->
           <div
             class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 reveal"
           >
@@ -676,7 +618,7 @@
                 改善アクションまで明確化
               </h3>
               <p class="text-gray-600 text-sm lg:text-base">
-                利益をもとに、何を改善すべきか・どこに投資すべきかが明確に。
+                利益をもとに、何を改善すべきか・<br class="block lg:hidden" />どこに投資すべきかが明確に。
               </p>
             </div>
             <div class="flex-1 flex justify-center">
@@ -690,8 +632,6 @@
         </div>
       </section>
 
-      <!-- CTA Banner -->
-      <!-- 変更点: max-w-5xl -> max-w-4xl (全体の幅を狭くする) -->
       <section class="px-4 py-10">
         <div class="max-w-3xl mx-auto">
           <a
@@ -703,12 +643,11 @@
               background-position: center;
             "
           >
-            <!-- テキストエリア -->
             <div class="text-center lg:text-left z-10">
               <p
                 class="text-white/90 text-xs lg:text-xl font-bold mb-2 tracking-wide"
               >
-                利益を見える化して再現性のある事業へ
+                利益を見える化して<br class="block lg:hidden" />再現性のある事業へ
               </p>
               <h3
                 class="text-white text-2xl lg:text-3xl font-black mb-6 tracking-tight leading-snug"
@@ -723,7 +662,6 @@
               </span>
             </div>
 
-            <!-- 画像エリア -->
             <div class="relative flex justify-center">
               <img
                 src="images/about/laptop-small.png"
@@ -741,7 +679,6 @@
               </div>
             </div>
 
-            <!-- 矢印 (右端固定) -->
             <div class="hidden lg:block absolute right-6">
               <i
                 class="fas fa-chevron-right text-white text-2xl group-hover:translate-x-1 transition-transform duration-300"
@@ -751,131 +688,79 @@
         </div>
       </section>
 
-      <!-- ========== REASONS SECTION ========== -->
       <section id="reasons" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4 lg:px-8">
-          <div class="flex flex-col lg:flex-row gap-12 items-center">
-            <!-- Left: Title Area -->
-            <div class="lg:w-1/3 reveal text-center lg:text-left">
-              <p
-                class="text-gray-400 text-sm font-bold tracking-widest mb-2 uppercase"
-              >
-                Reasons
-              </p>
-              <h2
-                class="text-[#00703C] text-3xl lg:text-4xl font-black leading-snug mb-6"
-              >
-                「EC 家計簿」が<br />選ばれる理由
-              </h2>
-              <p
-                class="text-gray-600 text-sm lg:text-base leading-relaxed font-medium"
-              >
-                「EC 家計簿」は、単なる会計ツールではなく<br
-                  class="hidden lg:block"
-                />利益改善パートナーとして選ばれています。
-              </p>
-            </div>
-
-            <!-- Right: 4-Quadrant Grid (Single Green Card) -->
-            <!-- 右側エリア: 4分割グリッド -->
-            <div class="lg:w-2/3 w-full reveal">
-              <!-- 緑色の大きなカード (角丸・影付き) -->
-              <div
-                class="bg-[#067f38] rounded-[20px] shadow-xl overflow-hidden text-white border border-white/30"
-              >
-                <!-- 
-      グリッドレイアウト
-      SP: 1列 (grid-cols-1)
-      PC: 2列 (grid-cols-2)
-    -->
-                <div class="grid grid-cols-1 lg:grid-cols-2">
-                  <!-- 1. 左上: 売上・利益拡大 -->
-                  <!-- 
-        border-b: 下線 (SP/PC共通)
-        md:border-r: 右線 (PCのみ)
-        border-white/30: 線の色
-      -->
-                  <div
-                    class="p-8 flex flex-col items-center justify-between h-full border-b border-white/30 lg:border-r"
-                  >
-                    <p
-                      class="text-center font-bold text-sm lg:text-base leading-relaxed"
-                    >
-                      導入したほぼすべての店舗で<br />売上・利益ともに拡大。
-                    </p>
-                    <!-- mt-6: テキストと画像の間隔 -->
-                    <div class="mt-6 flex items-end justify-center h-20">
-                      <img
-                        src="images/reasons/icon-sales-up.png"
-                        alt="売上拡大"
-                        class="h-full w-auto object-contain"
-                      />
-                    </div>
+          <div class="text-center mb-12 reveal">
+            <p class="text-gray-400 text-sm font-bold tracking-widest mb-1 uppercase">
+              Reasons
+            </p>
+            <h2 class="section-title text-[#00703C] text-2xl lg:text-3xl font-black">
+              「EC 家計簿」が選ばれる理由
+            </h2>
+            <p
+              class="text-gray-600 text-sm lg:text-base leading-relaxed font-medium mt-6 max-w-2xl mx-auto"
+            >
+              「EC 家計簿」は、単なる会計ツールではなく、<br class="block lg:hidden" />
+              利益改善パートナーとして選ばれています。
+            </p>
+          </div>
+          <div class="w-full reveal">
+            <div
+              class="max-w-5xl mx-auto bg-[#067f38] rounded-[20px] shadow-xl overflow-hidden text-white border border-white/30"
+            >
+              <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div
+                  class="p-8 flex flex-col items-center justify-between h-full border-b border-white/30 lg:border-r"
+                >
+                  <p class="text-center font-bold text-sm lg:text-base leading-relaxed">
+                    導入したほぼすべての店舗で<br />売上・利益ともに拡大。
+                  </p>
+                  <div class="mt-6 flex items-end justify-center h-20">
+                    <img
+                      src="images/reasons/icon-sales-up.png"
+                      alt="売上拡大"
+                      class="h-full w-auto object-contain"
+                    />
                   </div>
-
-                  <!-- 2. 右上: 自動運用 -->
-                  <!-- 
-        border-b: 下線 (SP/PC共通)
-        PCでは右線なし
-      -->
-                  <div
-                    class="p-8 flex flex-col items-center justify-between h-full border-b border-white/30"
-                  >
-                    <p
-                      class="text-center font-bold text-sm lg:text-base leading-relaxed"
-                    >
-                      簡単な初期設定だけで、<br />その後はすべて自動運用。
-                    </p>
-                    <div class="mt-6 flex items-end justify-center h-20">
-                      <img
-                        src="images/reasons/icon-auto-cycle.png"
-                        alt="自動運用"
-                        class="h-full w-auto object-contain"
-                      />
-                    </div>
+                </div>
+                <div
+                  class="p-8 flex flex-col items-center justify-between h-full border-b border-white/30"
+                >
+                  <p class="text-center font-bold text-sm lg:text-base leading-relaxed">
+                    簡単な初期設定だけで、<br />その後はすべて自動運用。
+                  </p>
+                  <div class="mt-6 flex items-end justify-center h-20">
+                    <img
+                      src="images/reasons/icon-auto-cycle.png"
+                      alt="自動運用"
+                      class="h-full w-auto object-contain"
+                    />
                   </div>
-
-                  <!-- 3. 左下: サポート -->
-                  <!-- 
-        SPでは下線が必要(border-b)、PCでは下線不要(md:border-b-0)
-        PCでは右線が必要(md:border-r)
-      -->
-                  <div
-                    class="p-8 flex flex-col items-center justify-between h-full border-b border-white/30 lg:border-b-0 lg:border-r"
-                  >
-                    <p
-                      class="text-center font-bold text-sm lg:text-base leading-relaxed"
-                    >
-                      初期設定から活用まで<br />専任スタッフが手厚くサポート。
-                    </p>
-                    <div class="mt-6 flex items-end justify-center h-20">
-                      <img
-                        src="images/reasons/icon-piggybank.png"
-                        alt="サポート"
-                        class="h-full w-auto object-contain"
-                      />
-                    </div>
+                </div>
+                <div
+                  class="p-8 flex flex-col items-center justify-between h-full border-b border-white/30 lg:border-b-0 lg:border-r"
+                >
+                  <p class="text-center font-bold text-sm lg:text-base leading-relaxed">
+                    初期設定から活用まで<br />専任スタッフが手厚くサポート。
+                  </p>
+                  <div class="mt-6 flex items-end justify-center h-20">
+                    <img
+                      src="images/reasons/icon-piggybank.png"
+                      alt="サポート"
+                      class="h-full w-auto object-contain"
+                    />
                   </div>
-
-                  <!-- 4. 右下: 改善実行 -->
-                  <!-- 
-        線なし (枠の右下隅なので)
-      -->
-                  <div
-                    class="p-8 flex flex-col items-center justify-between h-full"
-                  >
-                    <p
-                      class="text-center font-bold text-sm lg:text-base leading-relaxed"
-                    >
-                      分析だけでなく改善までの<br />実行もサポート。
-                    </p>
-                    <div class="mt-6 flex items-end justify-center h-20">
-                      <img
-                        src="images/reasons/icon-action-points.png"
-                        alt="改善実行"
-                        class="h-full w-auto object-contain"
-                      />
-                    </div>
+                </div>
+                <div class="p-8 flex flex-col items-center justify-between h-full">
+                  <p class="text-center font-bold text-sm lg:text-base leading-relaxed">
+                    分析だけでなく改善までの<br />実行もサポート。
+                  </p>
+                  <div class="mt-6 flex items-end justify-center h-20">
+                    <img
+                      src="images/reasons/icon-action-points.png"
+                      alt="改善実行"
+                      class="h-full w-auto object-contain"
+                    />
                   </div>
                 </div>
               </div>
@@ -884,14 +769,12 @@
         </div>
       </section>
 
-      <!-- ========== IMPORTANCE OF PROFIT SECTION ========== -->
       <section class="py-20 bg-white">
         <div class="max-w-5xl mx-auto px-4 lg:px-8">
           <div class="text-center mb-12 reveal">
             <p class="text-gray-400 text-sm tracking-widest mb-1">
               Importance of Profit Management
             </p>
-
             <h2
               class="section-title text-ec-green-dark text-2xl lg:text-3xl font-black"
             >
@@ -899,13 +782,10 @@
             </h2>
           </div>
 
-          <!-- 3 Point Cards -->
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12 reveal">
-            <!-- POINT 01 -->
             <div
               class="border-2 border-gray-100 rounded-2xl p-6 text-center hover:shadow-md transition-shadow"
             >
-              <!-- 画像エリア -->
               <div class="mb-4 flex justify-center">
                 <img
                   src="images/solution/point1.png"
@@ -917,8 +797,6 @@
                 売上が増えても赤字では意味がない
               </p>
             </div>
-
-            <!-- POINT 02 -->
             <div
               class="border-2 border-gray-100 rounded-2xl p-6 text-center hover:shadow-md transition-shadow"
             >
@@ -930,11 +808,9 @@
                 />
               </div>
               <p class="text-ec-green-dark font-bold text-sm">
-                商品ごとの利益率を正しく知ることで、販促の投資先が明確に
+                商品ごとの利益率を正しく知ることで、<br class="block lg:hidden" />販促の投資先が明確に
               </p>
             </div>
-
-            <!-- POINT 03 -->
             <div
               class="border-2 border-gray-100 rounded-2xl p-6 text-center hover:shadow-md transition-shadow"
             >
@@ -946,29 +822,26 @@
                 />
               </div>
               <p class="text-ec-green-dark font-bold text-sm">
-                金融機関や投資家からの評価基準は「利益」→ 資金調達・融資にも直結
+                金融機関や投資家からの評価基準は「利益」<br class="block lg:hidden" />→ 資金調達・融資にも直結
               </p>
             </div>
           </div>
 
           <p class="text-center text-ec-green-dark text-sm mb-10 reveal">
-            ネットショップの多くは「売上」だけを追いがちですが、<br />事業を継続的に伸ばすのに<strong
+            ネットショップの多くは「売上」だけを追いがちですが、<br class="block lg:hidden" />事業を継続的に伸ばすのに<strong
               >重要なのは「利益」</strong
             >
             です。
           </p>
 
-          <!-- Pain Points -->
           <div
             class="relative border-2 border-ec-green rounded-2xl p-10 pt-14 flex flex-col lg:flex-row items-center gap-8 reveal"
           >
-            <!-- タイトル -->
             <h3
               class="absolute -top-4 left-1/2 -translate-x-1/2 bg-white px-6 text-ec-green-dark text-ec-green-dark text-xl lg:text-2xl font-bold"
             >
               でも、利益管理って実際は大変…
             </h3>
-
             <div class="flex-1">
               <ul class="flex flex-col gap-4">
                 <li
@@ -978,9 +851,8 @@
                     src="images/solution/icon-check.png"
                     class="w-5 h-5 shrink-0 mt-0.5"
                   />
-                  エクセル管理が煩雑で、毎日の工数と手入力のミスが多発する…
+                  <span>エクセル管理が煩雑で、<br class="block lg:hidden" />毎日の工数と手入力のミスが多発する…</span>
                 </li>
-
                 <li
                   class="flex items-start gap-3 text-ec-green-dark text-sm font-bold"
                 >
@@ -988,9 +860,8 @@
                     src="images/solution/icon-check.png"
                     class="w-5 h-5 shrink-0 mt-0.5"
                   />
-                  物流費が増加し、利益を圧迫しているのに見えにくい…
+                  <span>物流費が増加し、<br class="block lg:hidden" />利益を圧迫しているのに見えにくい…</span>
                 </li>
-
                 <li
                   class="flex items-start gap-3 text-ec-green-dark text-sm font-bold"
                 >
@@ -998,9 +869,8 @@
                     src="images/solution/icon-check.png"
                     class="w-5 h-5 shrink-0 mt-0.5"
                   />
-                  広告費やクーポン費用がバラバラで集計に時間がかかる…
+                  <span>広告費やクーポン費用がバラバラで<br class="block lg:hidden" />集計に時間がかかる…</span>
                 </li>
-
                 <li
                   class="flex items-start gap-3 text-ec-green-dark text-sm font-bold"
                 >
@@ -1008,11 +878,10 @@
                     src="images/solution/icon-check.png"
                     class="w-5 h-5 shrink-0 mt-0.5"
                   />
-                  モールごとに手数料率が違い正確な利益計算ができない…
+                  <span>モールごとに手数料率が違い<br class="block lg:hidden" />正確な利益計算ができない…</span>
                 </li>
               </ul>
             </div>
-
             <div class="shrink-0">
               <img
                 src="images/nobi-ton/nobi-ton-cry.png"
@@ -1023,53 +892,28 @@
         </div>
       </section>
 
-      <!-- ========== SOLUTION SECTION ========== -->
       <section
         id="solution"
         class="relative lg:pt-28 pt-10 pb-20 overflow-hidden"
       >
-        <!-- Background circle image -->
-        <!-- 
-          修正ポイント:
-          h-full : 親要素の高さ(コンテンツ量)に合わせて画像を縦に伸ばす
-          object-cover : アスペクト比を維持して隙間なく埋める (画像の一部がトリミングされる)
-          ※もし画像全体を歪めてでも表示させたい場合は object-fill に変更してください
-        -->
         <img
           src="images/hero/bg-gradient-circle.png"
           alt=""
           class="absolute inset-0 w-full h-full pointer-events-none select-none z-0"
           aria-hidden="true"
         />
-        <!-- Wave top -->
 
         <div class="max-w-5xl mx-auto px-4 lg:px-8">
-          <!-- タイトル -->
           <div class="text-center mb-8 lg:mb-12 reveal">
             <h2 class="text-white text-xl lg:text-3xl font-black leading-snug">
               「EC家計簿」で<br class="block lg:hidden" />全て解決できます！
             </h2>
           </div>
 
-          <!-- 
-            カードグリッド 
-            grid-cols-1 : スマホで1列（縦積み）
-            lg:grid-cols-4 : PCで4列（横並び）
-            gap-4 : カード間の隙間
-          -->
           <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-10 reveal">
-            <!-- Card 1 -->
-            <!-- 
-              スマホ時は flex-row (アイコン左、文字右) にするパターンと
-              flex-col (アイコン上、文字下) のままにするパターンがあります。
-              今回は「要素を小さくして」とのことなので、
-              コンパクトな「横並びリスト形式（アイコン左・文字右）」にするのが一番綺麗です。
-            -->
             <div
               class="bg-white rounded-xl p-4 flex items-center lg:flex-col lg:text-center lg:p-5 hover:shadow-lg transition-shadow"
             >
-              <!-- アイコンエリア -->
-              <!-- shrink-0: アイコンが潰れないようにする -->
               <div
                 class="w-12 h-12 flex-shrink-0 flex items-center justify-center mr-4 lg:mr-0 lg:mb-3 lg:w-full lg:h-12"
               >
@@ -1079,17 +923,13 @@
                   class="max-h-10 w-auto object-contain"
                 />
               </div>
-              <!-- テキストエリア -->
               <p
                 class="text-ec-green-dark font-bold text-sm lg:text-sm leading-snug text-left lg:text-center"
               >
-                売上費用利益を自動集計・<br
-                  class="hidden lg:block"
-                />ダッシュボード化
+                売上費用利益を自動集計・<br class="hidden lg:block" />ダッシュボード化
               </p>
             </div>
 
-            <!-- Card 2 -->
             <div
               class="bg-white rounded-xl p-4 flex items-center lg:flex-col lg:text-center lg:p-5 hover:shadow-lg transition-shadow"
             >
@@ -1105,13 +945,10 @@
               <p
                 class="text-ec-green-dark font-bold text-sm lg:text-sm leading-snug text-left lg:text-center"
               >
-                店舗別・商品別・SKU別の<br
-                  class="hidden lg:block"
-                />利益を可視化
+                店舗別・商品別・SKU別の<br class="hidden lg:block" />利益を可視化
               </p>
             </div>
 
-            <!-- Card 3 -->
             <div
               class="bg-white rounded-xl p-4 flex items-center lg:flex-col lg:text-center lg:p-5 hover:shadow-lg transition-shadow"
             >
@@ -1127,13 +964,10 @@
               <p
                 class="text-ec-green-dark font-bold text-sm lg:text-sm leading-snug text-left lg:text-center"
               >
-                日次・月次での<br
-                  class="hidden lg:block"
-                />リアルタイムデータ表示
+                日次・月次での<br class="hidden lg:block" />リアルタイムデータ表示
               </p>
             </div>
 
-            <!-- Card 4 -->
             <div
               class="bg-white rounded-xl p-4 flex items-center lg:flex-col lg:text-center lg:p-5 hover:shadow-lg transition-shadow"
             >
@@ -1149,14 +983,11 @@
               <p
                 class="text-ec-green-dark font-bold text-sm lg:text-sm leading-snug text-left lg:text-center"
               >
-                売上・利益拡大の<br
-                  class="hidden lg:block"
-                />改善アクションが明確化
+                売上・利益拡大の<br class="hidden lg:block" />改善アクションが明確化
               </p>
             </div>
           </div>
 
-          <!-- 下部テキスト -->
           <p
             class="text-center text-white/90 text-xs lg:text-sm reveal font-black leading-relaxed"
           >
@@ -1166,9 +997,7 @@
         </div>
       </section>
 
-      <!-- ========== VOICE / CASES SECTION ========== -->
       <section id="cases" class="relative py-20 overflow-hidden">
-        <!-- Background image overlay -->
         <div class="absolute inset-0 bg-gray-800">
           <div
             class="w-full h-full"
@@ -1184,7 +1013,6 @@
         <div class="relative z-10 max-w-5xl mx-auto px-4 lg:px-8">
           <div class="text-center mb-12 reveal">
             <p class="text-white text-sm tracking-widest mb-1">Voice</p>
-
             <h2
               class="section-title text-white text-2xl lg:text-3xl font-black"
             >
@@ -1198,8 +1026,7 @@
               class="bg-white rounded-2xl p-6 opacity-85 hover:shadow-xl transition-shadow flex flex-col"
             >
               <p class="text-sm leading-relaxed font-bold flex-1 min-h-[72px]">
-                導入によって販促の見直しと改善で年間売上 +10%、営業利益 +6pt
-                改善しました。
+                導入によって販促の見直しと改善で<br class="block lg:hidden" />年間売上 +10%、営業利益 +6pt<br class="block lg:hidden" />改善しました。
               </p>
               <div class="flex items-center gap-3 pt-4 mt-auto">
                 <div
@@ -1221,7 +1048,7 @@
               class="bg-white rounded-2xl p-6 opacity-85 hover:shadow-xl transition-shadow flex flex-col"
             >
               <p class="text-sm leading-relaxed font-bold flex-1 min-h-[72px]">
-                赤字商品を早期に発見でき、広告のかけ方を変えるだけで黒字化できました。
+                赤字商品を早期に発見でき、<br class="block lg:hidden" />広告のかけ方を変えるだけで<br class="block lg:hidden" />黒字化できました。
               </p>
               <div class="flex items-center gap-3 pt-4 mt-auto">
                 <div
@@ -1243,7 +1070,7 @@
               class="bg-white rounded-2xl p-6 opacity-85 hover:shadow-xl transition-shadow flex flex-col"
             >
               <p class="text-sm leading-relaxed font-bold flex-1 min-h-[72px]">
-                毎月の利益計算にかけていた２時間分の作業が、ボタンひとつで完了。経営会議もデータドリブンになりました。
+                毎月の利益計算にかけていた２時間分の作業が、<br class="block lg:hidden" />ボタンひとつで完了。<br class="block lg:hidden" />経営会議もデータドリブンになりました。
               </p>
               <div class="flex items-center gap-3 pt-4 mt-auto">
                 <div
@@ -1265,24 +1092,19 @@
         </div>
       </section>
 
-      <!-- ========== FLOW SECTION ========== -->
       <section id="flow" class="py-20 bg-white">
         <div class="max-w-5xl mx-auto px-4 lg:px-8">
           <div class="text-center mb-12 reveal">
             <p class="text-gray-400 text-sm tracking-widest mb-1">Flow</p>
-
             <h2
               class="section-title text-ec-green-dark text-2xl lg:text-3xl font-black"
             >
               導入までの流れ
             </h2>
           </div>
-
-          <!-- PC用 (lg以上で表示) -->
           <div
             class="hidden lg:flex items-stretch justify-between gap-4 reveal w-full"
           >
-            <!-- STEP 1 -->
             <div
               class="flex-1 flex flex-col bg-white rounded-2xl p-5 shadow-md text-center"
             >
@@ -1306,12 +1128,10 @@
               </div>
             </div>
 
-            <!-- Arrow -->
             <div class="flex-shrink-0 self-center text-gray-300">
               <i class="fas fa-chevron-right text-xl"></i>
             </div>
 
-            <!-- STEP 2 -->
             <div
               class="flex-1 flex flex-col bg-white rounded-2xl p-5 shadow-md text-center"
             >
@@ -1332,12 +1152,10 @@
               </div>
             </div>
 
-            <!-- Arrow -->
             <div class="flex-shrink-0 self-center text-gray-300">
               <i class="fas fa-chevron-right text-xl"></i>
             </div>
 
-            <!-- STEP 3 -->
             <div
               class="flex-1 flex flex-col bg-white rounded-2xl p-5 shadow-md text-center"
             >
@@ -1356,12 +1174,10 @@
               </div>
             </div>
 
-            <!-- Arrow -->
             <div class="flex-shrink-0 self-center text-gray-300">
               <i class="fas fa-chevron-right text-xl"></i>
             </div>
 
-            <!-- STEP 4 -->
             <div
               class="flex-1 flex flex-col bg-white rounded-2xl p-5 shadow-md text-center"
             >
@@ -1383,9 +1199,7 @@
             </div>
           </div>
 
-          <!-- SP用 (lgより小さいときに表示) -->
           <div class="flex lg:hidden flex-col gap-4 reveal">
-            <!-- Step 1 -->
             <div
               class="flex items-center gap-4 bg-ec-green-pale rounded-2xl p-5"
             >
@@ -1408,7 +1222,6 @@
               <i class="fas fa-chevron-down text-ec-green text-lg"></i>
             </div>
 
-            <!-- Step 2 -->
             <div
               class="flex items-center gap-4 bg-ec-green-pale rounded-2xl p-5"
             >
@@ -1432,7 +1245,6 @@
               <i class="fas fa-chevron-down text-ec-green text-lg"></i>
             </div>
 
-            <!-- Step 3 -->
             <div
               class="flex items-center gap-4 bg-ec-green-pale rounded-2xl p-5"
             >
@@ -1454,7 +1266,6 @@
               <i class="fas fa-chevron-down text-ec-green text-lg"></i>
             </div>
 
-            <!-- Step 4 -->
             <div
               class="flex items-center gap-4 bg-ec-green-pale rounded-2xl p-5"
             >
@@ -1483,114 +1294,152 @@
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <!-- イベント情報 -->
             <div class="reveal">
-              <h2 class="text-ec-green-dark text-xl font-black mb-4">
+              <h2 class="text-ec-green-dark text-2xl font-black mb-4">
                 イベント情報
               </h2>
+      
               <div class="flex flex-col gap-3">
                 <a
                   href="https://seminar.tsuhannews.jp/seminar/20260213/"
                   target="_blank"
                   rel="noopener"
-                  class="flex gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
+                  class="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                 >
                   <img
                     src="https://seminar.tsuhannews.jp/control-panel/wp-content/uploads/2025/12/20260213_1.jpg"
                     alt="セミナーサムネイル"
                     class="w-24 h-16 rounded-lg object-cover shrink-0"
                   />
-                  <div class="flex flex-col justify-center gap-1 min-w-0">
-                    <p class="text-gray-400 text-xs">2026.02.13</p>
+      
+                  <div class="flex flex-col gap-1 min-w-0">
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <time datetime="2026-02-13" class="text-gray-400 text-xs">
+                        2026.02.13
+                      </time>
+                      <span
+                        class="inline-block bg-ec-green/10 text-ec-green text-[10px] font-bold px-2 py-0.5 rounded w-fit"
+                      >
+                        イベント
+                      </span>
+                    </div>
+      
                     <p
                       class="text-gray-700 text-sm font-medium leading-snug line-clamp-2 group-hover:text-ec-green transition-colors"
                     >
                       【通販ニュース主催セミナー】モールから自社ECへ。多チャネル連携で利益を最大化する戦略セミナー
                     </p>
+      
                     <p class="text-gray-400 text-xs">seminar.tsuhannews.jp</p>
                   </div>
                 </a>
               </div>
             </div>
-
+      
             <!-- お知らせ -->
             <div class="reveal">
-              <h2 class="text-ec-green-dark text-xl font-black mb-4">
+              <h2 class="text-ec-green-dark text-2xl font-black mb-4">
                 お知らせ
               </h2>
+      
               <div class="flex flex-col gap-3">
-                <!-- PR TIMES -->
                 <a
                   href="https://prtimes.jp/main/html/rd/p/000000013.000175264.html"
                   target="_blank"
                   rel="noopener"
-                  class="flex gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
+                  class="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                 >
                   <img
                     src="https://prcdn.freetls.fastly.net/release_image/175264/13/175264-13-29f434d0be654e7420a5d0afbb4a0c58-1181x632.png?format=jpeg&auto=webp&fit=bounds&width=2400&height=1260"
                     alt="PR TIMESサムネイル"
                     class="w-24 h-16 rounded-lg object-cover shrink-0"
                   />
-                  <div class="flex flex-col justify-center gap-1 min-w-0">
-                    <span
-                      class="inline-block bg-ec-green/10 text-ec-green text-[10px] font-bold px-2 py-0.5 rounded w-fit"
-                      >プレスリリース</span
-                    >
+      
+                  <div class="flex flex-col gap-1 min-w-0">
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <time datetime="YYYY-MM-DD" class="text-gray-400 text-xs">
+                        YYYY.MM.DD
+                      </time>
+                      <span
+                        class="inline-block bg-ec-green/10 text-ec-green text-[10px] font-bold px-2 py-0.5 rounded w-fit"
+                      >
+                        プレスリリース
+                      </span>
+                    </div>
+      
                     <p
                       class="text-gray-700 text-sm font-medium leading-snug line-clamp-2 group-hover:text-ec-green transition-colors"
                     >
                       株式会社Ritaen、EC事業者向け利益管理ツール「EC家計簿」の提供を開始
                     </p>
+      
                     <p class="text-gray-400 text-xs">prtimes.jp</p>
                   </div>
                 </a>
-
-                <!-- 通販ニュース -->
+      
                 <a
                   href="https://www.tsuhannews.jp/documents/detail/2937"
                   target="_blank"
                   rel="noopener"
-                  class="flex gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
+                  class="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                 >
                   <img
                     src="https://www.tsuhannews.jp/documents/image/2937"
                     alt="通販ニュースサムネイル"
                     class="w-24 h-16 rounded-lg object-cover shrink-0"
                   />
-                  <div class="flex flex-col justify-center gap-1 min-w-0">
-                    <span
-                      class="inline-block bg-ec-green/10 text-ec-green text-[10px] font-bold px-2 py-0.5 rounded w-fit"
-                      >掲載情報</span
-                    >
+      
+                  <div class="flex flex-col gap-1 min-w-0">
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <time datetime="YYYY-MM-DD" class="text-gray-400 text-xs">
+                        YYYY.MM.DD
+                      </time>
+                      <span
+                        class="inline-block bg-ec-green/10 text-ec-green text-[10px] font-bold px-2 py-0.5 rounded w-fit"
+                      >
+                        掲載情報
+                      </span>
+                    </div>
+      
                     <p
                       class="text-gray-700 text-sm font-medium leading-snug line-clamp-2 group-hover:text-ec-green transition-colors"
                     >
                       楽天市場の利益を可視化・改善できる新サービス「EC家計簿」
                     </p>
+      
                     <p class="text-gray-400 text-xs">tsuhannews.jp</p>
                   </div>
                 </a>
-
-                <!-- コマースピック -->
+      
                 <a
                   href="https://www.commercepick.com/archives/84494"
                   target="_blank"
                   rel="noopener"
-                  class="flex gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
+                  class="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                 >
                   <img
                     src="https://www.commercepick.com/wp-content/uploads/2026/02/main_f8ed347ffbc74c058b5146652addc3f7.png"
                     alt="コマースピックサムネイル"
                     class="w-24 h-16 rounded-lg object-cover shrink-0"
                   />
-                  <div class="flex flex-col justify-center gap-1 min-w-0">
-                    <span
-                      class="inline-block bg-ec-green/10 text-ec-green text-[10px] font-bold px-2 py-0.5 rounded w-fit"
-                      >メディア掲載</span
-                    >
+      
+                  <div class="flex flex-col gap-1 min-w-0">
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <time datetime="YYYY-MM-DD" class="text-gray-400 text-xs">
+                        YYYY.MM.DD
+                      </time>
+                      <span
+                        class="inline-block bg-ec-green/10 text-ec-green text-[10px] font-bold px-2 py-0.5 rounded w-fit"
+                      >
+                        メディア掲載
+                      </span>
+                    </div>
+      
                     <p
                       class="text-gray-700 text-sm font-medium leading-snug line-clamp-2 group-hover:text-ec-green transition-colors"
                     >
                       株式会社Ritaen、EC事業者向け利益管理ツール「EC家計簿」の提供を開始
                     </p>
+      
                     <p class="text-gray-400 text-xs">commercepick.com</p>
                   </div>
                 </a>
@@ -1599,70 +1448,8 @@
           </div>
         </div>
       </section>
+      
 
-      <!-- ========== COLUMN ========== -->
-      <!-- ========== COLUMN SECTION (一時非表示) ==========
-      <section id="column" class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 lg:px-8">
-          <div class="text-center mb-10 reveal">
-            <h2 class="text-ec-green-dark text-2xl font-black">コラム</h2>
-          </div>
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8 reveal">
-            <a href="#" class="group">
-              <div
-                class="bg-sky-200 rounded-xl aspect-video flex items-center justify-center mb-3"
-              >
-                <p class="text-gray-500 text-xs">任意のアイキャッチ画像</p>
-              </div>
-              <h3
-                class="text-gray-800 font-bold text-sm group-hover:text-ec-green transition-colors mb-1"
-              >
-                営業プロセスの可視化とは？目的・手法・成功事例を解説
-              </h3>
-              <p class="text-gray-400 text-xs">2026.03.01</p>
-            </a>
-            <a href="#" class="group">
-              <div
-                class="bg-yellow-200 rounded-xl aspect-video flex items-center justify-center mb-3"
-              >
-                <p class="text-gray-500 text-xs">任意のアイキャッチ画像</p>
-              </div>
-              <h3
-                class="text-gray-800 font-bold text-sm group-hover:text-ec-green transition-colors mb-1"
-              >
-                営業プロセスの可視化とは？目的・手法・成功事例を解説
-              </h3>
-              <p class="text-gray-400 text-xs">2026.03.01</p>
-            </a>
-            <a href="#" class="group">
-              <div
-                class="bg-purple-200 rounded-xl aspect-video flex items-center justify-center mb-3"
-              >
-                <p class="text-gray-500 text-xs">任意のアイキャッチ画像</p>
-              </div>
-              <h3
-                class="text-gray-800 font-bold text-sm group-hover:text-ec-green transition-colors mb-1"
-              >
-                営業プロセスの可視化とは？目的・手法・成功事例を解説
-              </h3>
-              <p class="text-gray-400 text-xs">2026.03.01</p>
-            </a>
-          </div>
-          <div class="text-center reveal">
-            <a
-              href="#"
-              class="inline-flex items-center gap-2 border border-gray-300 px-8 py-3 rounded-full text-gray-600 hover:border-ec-green hover:text-ec-green transition-colors"
-            >
-              コラム一覧 <i class="fas fa-chevron-right text-xs"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-      ========== / COLUMN SECTION ========== -->
-
-      <!-- ========== CAMPAIGN SECTION ========== -->
-      <!-- ========== CAMPAIGN SECTION ========== -->
-      <!-- 背景に斜めストライプを追加 -->
       <section
         class="relative w-full bg-contain bg-center bg-no-repeat lg:bg-cover min-h-[320px] lg:min-h-[600px]"
         style="background-image: url('images/refaral/アセット 32@2x.png')"
@@ -1681,7 +1468,7 @@
               class="text-[#00703C] text-[11px] sm:text-xs lg:text-base font-bold leading-relaxed px-2"
             >
               お友達をご紹介いただくと、紹介者様とお友達に<br
-                class="lg:hidden"
+                class="block lg:hidden"
               />
               お得なキャンペーン特典をプレゼント！
             </p>
@@ -1689,31 +1476,26 @@
           <div
             class="relative w-full max-w-[800px] mx-auto h-[300px] sm:h-[340px] lg:h-auto"
           >
-            <!-- === 左側：紹介者（白い円の上） === -->
             <div
               class="absolute top-[41%] lg:top-[45%] left-[37%] lg:left-[28%] -translate-x-1/2 -translate-y-1/2 text-center w-[50%] lg:w-[45%] flex flex-col items-center"
             >
-              <!-- バッジ -->
               <span
                 class="inline-block bg-[#F7931E] text-white font-bold rounded px-2 py-[1px] lg:px-6 lg:py-1.5 text-[clamp(8px,1vw,18px)] mb-1 lg:mb-3 whitespace-nowrap"
               >
                 紹介者
               </span>
 
-              <!-- 金額 -->
               <div class="text-[#00703C] font-black leading-none mb-1">
                 <span class="text-[clamp(14px,4vw,56px)]">10,000</span>
                 <span class="text-[clamp(7px,1.5vw,20px)] font-bold">円分</span>
               </div>
 
-              <!-- ラベル -->
               <p
                 class="text-[#00703C] font-bold text-[clamp(8px,1.6vw,24px)] mb-1 lg:mb-2 whitespace-nowrap"
               >
                 クレジット
               </p>
 
-              <!-- 注釈 -->
               <p
                 class="text-[#00703C] font-bold text-[clamp(7px,1.4vw,22px)] whitespace-nowrap"
               >
@@ -1721,31 +1503,26 @@
               </p>
             </div>
 
-            <!-- === 右側：お友達（緑の円の上） === -->
             <div
               class="absolute top-[41%] lg:top-[45%] right-[37%] lg:right-[28%] translate-x-1/2 -translate-y-1/2 text-center w-[50%] lg:w-[45%] flex flex-col items-center"
             >
-              <!-- バッジ -->
               <span
                 class="inline-block bg-[#F7931E] text-white font-bold rounded px-2 py-[1px] lg:px-6 lg:py-1.5 text-[clamp(8px,1vw,18px)] mb-1 lg:mb-3 whitespace-nowrap"
               >
                 お友達
               </span>
 
-              <!-- 金額 -->
               <div class="text-white font-black leading-none mb-1">
                 <span class="text-[clamp(14px,4vw,56px)]">10,000</span>
                 <span class="text-[clamp(7px,1.5vw,20px)] font-bold">円分</span>
               </div>
 
-              <!-- ラベル -->
               <p
                 class="text-white font-bold text-[clamp(8px,1.6vw,24px)] mb-1 lg:mb-2 whitespace-nowrap"
               >
                 クレジット
               </p>
 
-              <!-- 注釈 -->
               <p
                 class="text-white font-bold text-[clamp(7px,1.4vw,22px)] whitespace-nowrap"
               >
@@ -1756,10 +1533,8 @@
         </div>
       </section>
 
-      <!-- ========== FAQ SECTION ========== -->
       <section id="faq" class="py-20 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 lg:px-8">
-          <!-- セクションタイトル -->
           <div class="text-center mb-12 reveal">
             <p
               class="text-gray-400 text-sm tracking-widest font-bold mb-2 uppercase"
@@ -1772,11 +1547,8 @@
             <div class="w-10 h-1 bg-ec-orange mx-auto mt-4 rounded-full"></div>
           </div>
 
-          <!-- FAQリスト (カード型) -->
           <div class="flex flex-col gap-6 reveal">
-            <!-- FAQ Item 1 -->
             <div class="bg-white rounded-xl shadow-md p-6 lg:p-8">
-              <!-- 質問 -->
               <div class="flex items-start gap-3 mb-4">
                 <span class="text-ec-green font-bold text-lg mt-0.5">Q</span>
                 <h3
@@ -1785,7 +1557,6 @@
                   どのモールに対応していますか？
                 </h3>
               </div>
-              <!-- 回答 (緑の背景) -->
               <div class="bg-ec-green-pale rounded-lg p-5">
                 <p
                   class="text-ec-green-dark text-sm lg:text-base leading-relaxed font-medium"
@@ -1796,7 +1567,6 @@
               </div>
             </div>
 
-            <!-- FAQ Item 2 -->
             <div class="bg-white rounded-xl shadow-md p-6 lg:p-8">
               <div class="flex items-start gap-3 mb-4">
                 <span class="text-ec-green font-bold text-lg mt-0.5">Q</span>
@@ -1815,7 +1585,6 @@
               </div>
             </div>
 
-            <!-- FAQ Item 3 -->
             <div class="bg-white rounded-xl shadow-md p-6 lg:p-8">
               <div class="flex items-start gap-3 mb-4">
                 <span class="text-ec-green font-bold text-lg mt-0.5">Q</span>
@@ -1836,7 +1605,6 @@
               </div>
             </div>
 
-            <!-- FAQ Item 4 -->
             <div class="bg-white rounded-xl shadow-md p-6 lg:p-8">
               <div class="flex items-start gap-3 mb-4">
                 <span class="text-ec-green font-bold text-lg mt-0.5">Q</span>
@@ -1856,7 +1624,6 @@
               </div>
             </div>
 
-            <!-- FAQ Item 5 -->
             <div class="bg-white rounded-xl shadow-md p-6 lg:p-8">
               <div class="flex items-start gap-3 mb-4">
                 <span class="text-ec-green font-bold text-lg mt-0.5">Q</span>
@@ -1891,12 +1658,11 @@
           <div
             class="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16"
           >
-            <!-- 左側: テキスト情報 -->
             <div class="flex-1 text-center lg:text-left reveal">
               <p
                 class="text-white/90 font-bold text-sm lg:text-base mb-4 tracking-wide"
               >
-                利益を「見える化」しなければ、再現性のある事業成長はない。
+                利益を「見える化」しなければ、<br class="block lg:hidden" />再現性のある事業成長はない。
               </p>
               <h2
                 class="text-white text-3xl lg:text-4xl font-black leading-tight mb-6"
@@ -1911,92 +1677,110 @@
               </p>
             </div>
 
-            <!-- 右側: アクションボタン -->
             <div
-              class="flex-shrink-0 w-full max-w-sm flex flex-col gap-4 reveal"
+            class="flex-shrink-0 w-full max-w-sm flex flex-col gap-4 reveal"
+          >
+            <a
+              href="#"
+              class="js-link-contact block bg-[#00703C] text-white text-center font-bold py-4 text-lg hover:bg-[#005a30] transition-colors rounded shadow-md"
             >
-              <a
-                href="#"
-                class="js-link-contact block bg-[#00703C] text-white text-center font-bold py-4 shadow-lg hover:bg-[#005a30] hover:shadow-xl transition-all duration-300 text-lg"
-              >
-                各種お問い合わせ
-                <i class="fas fa-chevron-right ml-2 text-sm"></i>
-              </a>
-
-              <a
-                href="#"
-                class="js-link-contact block bg-[#F7931E] text-white text-center font-bold py-4 shadow-lg hover:bg-[#e08216] hover:shadow-xl transition-all duration-300 text-lg"
-              >
-                無料トライアル
-                <i class="fas fa-chevron-right ml-2 text-sm"></i>
-              </a>
-            </div>
+              各種お問い合わせ
+              <i class="fas fa-chevron-right ml-2 text-sm"></i>
+            </a>
+          
+            <a
+              href="#"
+              class="js-link-contact block bg-[#F7931E] text-white text-center font-bold py-4 text-lg hover:opacity-90 transition-opacity rounded shadow-md"
+            >
+              無料トライアル
+              <i class="fas fa-chevron-right ml-2 text-sm"></i>
+            </a>
+          </div>
+          
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ========== FOOTER ========== -->
-    <footer class="bg-white pb-8">
-      <!-- Wave: グリーンCTAセクションから白フッターへの遷移 -->
-
-      <div class="max-w-5xl mx-auto px-4 lg:px-8 pt-8">
+    <footer class="bg-white border-t border-gray-100">
+      <div class="max-w-5xl mx-auto px-4 lg:px-8 pt-10 pb-8">
         <!-- Logo -->
-        <div class="flex justify-center mb-8">
-          <a href="#">
+        <div class="flex justify-center mb-8 sm:mb-10">
+          <a
+            href="#"
+            class="js-link-top hover:opacity-80 transition-opacity"
+            aria-label="EC 家計簿 トップへ戻る"
+          >
             <img
               src="images/common/logo-green.png"
               alt="EC 家計簿"
-              class="h-14 w-auto object-contain"
+              class="h-16 sm:h-[68px] lg:h-[76px] w-auto object-contain"
             />
           </a>
         </div>
-
-        <!-- Footer Nav -->
-        <nav
-          class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm text-gray-600"
-        >
-          <a href="#about" class="hover:text-ec-green transition-colors"
-            >EC 家計簿とは？</a
+    
+        <!-- Navigation -->
+        <nav class="mb-6">
+          <ul
+            class="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 gap-y-3 text-[13px] sm:text-sm text-gray-600 leading-relaxed text-center"
           >
-          <a href="#reasons" class="hover:text-ec-green transition-colors"
-            >選ばれる理由</a
-          >
-          <a href="#cases" class="hover:text-ec-green transition-colors"
-            >導入事例</a
-          >
-          <a href="#flow" class="hover:text-ec-green transition-colors"
-            >導入までの流れ</a
-          >
-          <a href="#column" class="hover:text-ec-green transition-colors"
-            >コラム</a
-          >
-          <a href="#news" class="hover:text-ec-green transition-colors"
-            >お知らせ</a
-          >
-          <a
-            href="https://ec-kakeibo.ritaen.com/contact"
-            class="hover:text-ec-green transition-colors"
-            >お問い合わせ</a
-          >
-          <a
-            href="https://ec-kakeibo.ritaen.com/contact"
-            class="hover:text-ec-green transition-colors"
-            >無料トライアル</a
-          >
+            <li>
+              <a href="#about" class="hover:text-ec-green transition-colors">
+                EC 家計簿とは？
+              </a>
+            </li>
+            <li>
+              <a href="#reasons" class="hover:text-ec-green transition-colors">
+                選ばれる理由
+              </a>
+            </li>
+            <li>
+              <a href="#cases" class="hover:text-ec-green transition-colors">
+                導入事例
+              </a>
+            </li>
+            <li>
+              <a href="#flow" class="hover:text-ec-green transition-colors">
+                導入までの流れ
+              </a>
+            </li>
+            <li>
+              <a href="#column" class="hover:text-ec-green transition-colors">
+                コラム
+              </a>
+            </li>
+            <li>
+              <a href="#news" class="hover:text-ec-green transition-colors">
+                お知らせ
+              </a>
+            </li>
+            <li>
+              <a href="#" class="js-link-contact hover:text-ec-green transition-colors">
+                お問い合わせ
+              </a>
+            </li>
+            <li>
+              <a href="#" class="js-link-contact hover:text-ec-green transition-colors">
+                無料トライアル
+              </a>
+            </li>
+          </ul>
         </nav>
-
-        <!-- Privacy -->
-        <div class="flex justify-center mb-8">
-          <a href="#" class="text-ec-green text-sm hover:underline"
-            >プライバシーポリシー</a
-          >
+    
+        <!-- Secondary Links -->
+        <div
+          class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 mb-6 text-[13px] sm:text-sm"
+        >
+          <a href="#" class="text-ec-green hover:underline">
+            プライバシーポリシー
+          </a>
         </div>
-
+    
         <!-- Copyright -->
-        <div class="text-center text-gray-400 text-xs">© Ritaen 2025</div>
+        <p class="text-center text-gray-400 text-xs">© Ritaen 2025</p>
       </div>
     </footer>
+    
 
     <script src="js/main.js"></script>
   </body>
