@@ -1,0 +1,17 @@
+# 依存関係（超重いので絶対入れない）
+node_modules/
+
+# ビルドして作られた公開用フォルダ（Renderが作ってくれるので不要）
+dist/
+dist-ssr/
+*.local
+
+# ログファイル
+logs
+*.log
+npm-debug.log*
+
+# 環境変数（パスワードなどが入るかもしれないので入れない）
+.env
+.env.local
+.env.*.local
