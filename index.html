@@ -42,7 +42,6 @@
         },
       };
     </script>
-    <script type="module" src="./js/loading.js"></script>
   </head>
   <body class="font-line bg-white overflow-x-hidden">
     <header id="header" class="fixed top-0 left-0 w-full z-50 text-white transition-all duration-300">
@@ -69,7 +68,6 @@
           />
         </a>
 
-        <!-- lg: → md: に変更 -->
         <nav
           class="hidden md:flex items-center gap-6 text-sm tracking-wide font-medium"
         >
@@ -80,7 +78,6 @@
           <a href="#faq" class="nav-link transition-opacity hover:opacity-80">よくある質問</a>
         </nav>
 
-        <!-- lg: → md: に変更 -->
         <div class="hidden md:flex items-center gap-3">
           <a
             href="#"
@@ -96,7 +93,6 @@
           </a>
         </div>
 
-        <!-- lg: → md: に変更 -->
         <button
           id="menu-btn"
           class="md:hidden flex flex-col gap-1.5 p-2 z-50 relative"
@@ -108,7 +104,6 @@
         </button>
       </div>
 
-      <!-- md:hidden に変更 -->
       <div
         id="mobile-menu"
         class="fixed top-0 right-0 h-full w-64 bg-white shadow-xl flex flex-col px-6 py-8 gap-4 z-50 translate-x-full transition-transform duration-300 md:hidden"
@@ -133,52 +128,6 @@
     </header>
 
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const menuBtn = document.getElementById("menu-btn");
-        const menuClose = document.getElementById("menu-close");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const hamburgerLines = document.querySelectorAll(".hamburger-line");
-        const mobileLinks = document.querySelectorAll(".mobile-link");
-
-        // メニューを閉じる共通処理
-        const closeMenu = () => {
-          mobileMenu.classList.add("translate-x-full");
-          mobileMenu.classList.remove("translate-x-0");
-          hamburgerLines.forEach((line) => {
-            line.classList.remove("bg-gray-800");
-            line.classList.add("bg-white");
-          });
-        };
-
-        // ハンバーガーボタン
-        menuBtn.addEventListener("click", () => {
-          mobileMenu.classList.toggle("translate-x-full");
-          mobileMenu.classList.toggle("translate-x-0");
-
-          if (mobileMenu.classList.contains("translate-x-0")) {
-            hamburgerLines.forEach((line) => {
-              line.classList.remove("bg-white");
-              line.classList.add("bg-gray-800");
-            });
-          } else {
-            hamburgerLines.forEach((line) => {
-              line.classList.remove("bg-gray-800");
-              line.classList.add("bg-white");
-            });
-          }
-        });
-
-        // ×ボタン
-        menuClose.addEventListener("click", closeMenu);
-
-        // リンククリックでも閉じる
-        mobileLinks.forEach((link) => {
-          link.addEventListener("click", closeMenu);
-        });
-      });
-    </script>
-
     <main>
       <section
       id="hero"
@@ -186,10 +135,8 @@
       style="background-image: url('images/hero/hero-bg-gradient.png')"
     >
     
-      <!-- ===== SP ===== -->
       <div class="flex lg:hidden flex-col items-center px-4 pt-24 sm:pt-28 pb-10">
     
-        <!-- Copy -->
         <h1 class="hero-copy reveal flex flex-col gap-3 items-center text-center mb-8">
           <span class="hero-copy-line bg-[#00622A]/85 px-5 py-1 inline-block rounded-sm">
             <span class="block text-white tracking-wider whitespace-nowrap font-line font-extrabold text-[clamp(1.5rem,6vw,2rem)]">
@@ -203,7 +150,6 @@
           </span>
         </h1>
     
-        <!-- Visual -->
         <div class="relative w-[92vw] max-w-[400px] aspect-[1/0.82] mb-2">
           <img
             src="images/hero/hero-arc-text.png"
@@ -221,7 +167,6 @@
           </div>
         </div>
     
-        <!-- Description -->
         <p class="max-w-[340px] text-white text-[13px] leading-[1.9] font-medium tracking-wide drop-shadow-lg text-left mb-6">
           「EC家計簿」は、楽天市場の売上・手数料・広告費・物流コストを自動で集計し、
           一目で利益が分かる仕組みを提供します。<br />
@@ -229,7 +174,6 @@
           事業者が本当に注力すべき「戦略」や「商品開発」に集中できる環境をつくります。
         </p>
     
-        <!-- CTA -->
         <a
           href="https://ec-kakeibo.ritaen.com/contact"
           class="group bg-white rounded-xl p-3 flex items-center gap-3 shadow-xl w-full max-w-[320px] sm:max-w-[340px] mx-auto mb-5"
@@ -250,7 +194,6 @@
           </div>
         </a>
     
-        <!-- Logos / Badges -->
         <div class="w-full flex justify-center">
           <div class="inline-flex items-center gap-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md px-8 py-3.5 shadow-sm">
             <img src="images/common/rakuten-logo.png" alt="Rakuten" class="h-7 w-auto object-contain" />
@@ -260,10 +203,6 @@
         </div>
     
       </div>
-      <!-- ===== /SP ===== -->
-    
-    
-      <!-- ===== PC ===== -->
       <div class="hidden lg:block relative h-screen min-h-[700px]">
         <div
           class="absolute top-[50%] right-[-4%] xl:right-[4%] -translate-y-1/2 z-10 w-[56vw] h-[46vw] xl:w-[820px] xl:h-[670px]"
@@ -288,7 +227,6 @@
             </div>
           </div>
         </div>
-        <!-- キャッチコピー（円の左外） -->
         <div
           class="absolute top-[28%] left-[4%] xl:left-[9%] -translate-y-1/2 z-20 flex flex-col gap-4 items-start hero-copy reveal"
         >
@@ -310,7 +248,6 @@
           </div>
         </div>
     
-        <!-- 説明文・CTA（左下） -->
         <div
           class="absolute bottom-[22%] left-[4%] xl:left-[9%] w-full max-w-[30vw] xl:max-w-[400px] flex flex-col gap-6 z-30"
         >
@@ -342,7 +279,6 @@
           </a>
         </div>
     
-        <!-- Rakuten / AI バッジ（左下） -->
         <div
           class="absolute bottom-[8%] xl:bottom-[60px] left-[4%] xl:left-[9%] flex items-center gap-4 z-30"
         >
@@ -352,8 +288,7 @@
           <img src="images/common/ai-system-badge.png" alt="AI SYSTEM" class="h-14 w-auto" />
         </div>
       </div>
-      <!-- ===== /PC ===== -->
-    </section>
+      </section>
     
     <section id="about" class="py-20 bg-white">
       <div class="max-w-4xl mx-auto px-4 lg:px-8">
@@ -366,13 +301,10 @@
           </h2>
         </div>
     
-        <!-- ラッパーにrelativeを追加 -->
         <div class="relative w-full max-w-[1000px] mx-auto">
     
-          <!-- カード本体 -->
           <div class="bg-[#f7f7f7] rounded-[20px] overflow-hidden">
     
-            <!-- PC（md以上） -->
             <div class="hidden md:block h-[320px]">
               <div class="absolute top-[60px] left-[60px] z-10">
                 <p class="text-[#00703C] text-2xl font-bold mb-4">楽天市場専用の</p>
@@ -399,7 +331,6 @@
               />
             </div>
     
-            <!-- SP（md未満） -->
             <div class="flex md:hidden flex-col items-center p-4">
               <div class="w-full text-center">
                 <p class="text-[#00703C] text-lg font-bold mb-3">楽天市場専用の</p>
@@ -430,7 +361,6 @@
     
           </div>
     
-          <!-- のびとん円アイコン（カード外・右下にはみ出す） -->
           <div class="absolute -bottom-8 right-4 md:right-[-66px] z-30 w-[110px] h-[110px] md:w-[180px] md:h-[180px] bg-[#dcfce7] rounded-full shadow-lg border-4 border-white text-[#00703C] overflow-hidden">
             <img
               src="images/nobi-ton/8.png"
@@ -1200,7 +1130,6 @@
       <section class="py-20 bg-white" id="news">
         <div class="max-w-5xl mx-auto px-4 lg:px-8">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <!-- イベント情報 -->
             <div class="reveal">
               <h2 class="text-ec-green-dark text-2xl font-black mb-4">
                 イベント情報
@@ -1243,7 +1172,6 @@
               </div>
             </div>
       
-            <!-- お知らせ -->
             <div class="reveal">
               <h2 class="text-ec-green-dark text-2xl font-black mb-4">
                 お知らせ
@@ -1360,7 +1288,6 @@
       <section class="relative w-full bg-cover bg-center bg-no-repeat min-h-[440px] sm:min-h-[520px] lg:min-h-[620px]" style="background-image: url('images/hero/background-striped.png')">
         <div class="max-w-5xl mx-auto px-4 lg:px-8 py-6 lg:py-12">
       
-          <!-- Header -->
           <div class="text-center relative z-10 pt-2 pb-4 lg:pb-6">
             <div class="text-center mb-4 reveal">
               <p class="text-gray-400 text-sm tracking-widest mb-1">Referral Campaign</p>
@@ -1372,11 +1299,8 @@
             </p>
           </div>
       
-          <!-- Visual Area -->
-          
           <div class="relative w-full max-w-[800px] mx-auto">
 
-            <!-- 背景画像をimgタグで -->
             <img
               src="images/refaral/referral.png"
               alt=""
@@ -1384,7 +1308,6 @@
             />
 
             
-            <!-- Left（紹介者） -->
             <div
             class="absolute top-[45%] left-[31%] -translate-x-1/2 -translate-y-1/2 text-center flex flex-col items-center w-[28%]"
             >
@@ -1405,7 +1328,6 @@
             </p>
             </div>
 
-            <!-- Right（お友達） -->
             <div
             class="absolute top-[45%] right-[30%] translate-x-1/2 -translate-y-1/2 text-center flex flex-col items-center w-[28%]"
             >
@@ -1436,7 +1358,6 @@
 
       <section id="faq" class="py-20 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 lg:px-8">
-          <!-- よくある質問 -->
           <div class="text-center mb-12 reveal">
             <p class="text-gray-400 text-sm tracking-widest mb-1">Question</p>
             <h2 class="section-title text-ec-green-dark text-2xl lg:text-3xl font-black">
@@ -1600,7 +1521,6 @@
 
     <footer class="bg-white">
       <div class="max-w-5xl mx-auto px-4 lg:px-8 pt-10 pb-8">
-        <!-- Logo -->
         <div class="flex justify-center mb-8 sm:mb-10">
           <a
             href="#"
@@ -1615,7 +1535,6 @@
           </a>
         </div>
     
-        <!-- Navigation -->
         <nav class="mb-6">
           <ul
             class="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 gap-y-3 text-[13px] sm:text-sm text-gray-600 leading-relaxed text-center"
@@ -1663,7 +1582,6 @@
           </ul>
         </nav>
     
-        <!-- Secondary Links -->
         <div
           class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 mb-6 text-[13px] sm:text-sm"
         >
@@ -1672,7 +1590,6 @@
           </a>
         </div>
     
-        <!-- Copyright -->
         <p class="text-center text-gray-400 text-xs">© Ritaen 2025</p>
       </div>
     </footer>

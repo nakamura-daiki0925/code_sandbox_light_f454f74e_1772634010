@@ -61,10 +61,17 @@ const BG_IMAGES = [
     // fonts-loadedクラスを付与
     document.body.classList.add('fonts-loaded');
   
-    // ローダーをフェードアウト
-    loader.style.opacity = '0';
-    setTimeout(() => loader.remove(), 400);
-  }
+ // ローダーをフェードアウト
+ loader.style.opacity = '0';
+  
+ setTimeout(() => {
+   loader.remove();
+   document.body.classList.add('is-loaded'); // 👈 ここまでは先ほどの通り
+   
+   // 📢 追加：全体に向けて「loadingComplete」というGOサインを打ち上げる！
+   window.dispatchEvent(new Event('loadingComplete')); 
+ }, 400);
+}
   
   document.addEventListener('DOMContentLoaded', init);
   

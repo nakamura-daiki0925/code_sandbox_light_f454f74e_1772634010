@@ -82,7 +82,7 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* アクティブ時は太字にする場合の補助 (Tailwindでやるなら不要だが念のため) */
+/* アクティブ時は太字にする場合の補助 */
 nav a.active {
   font-weight: 800; /* ExtraBold */
   opacity: 1;
@@ -147,6 +147,7 @@ nav a.active {
 .nobi-bounce {
   animation: bounceIn 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
+
 .section-title {
   position: relative;
   display: inline-block; /* 文字幅に合わせる */
@@ -162,11 +163,9 @@ nav a.active {
   height: 4px;
   background: #f7931e; /* bg-ec-orange 相当 */
   border-radius: 9999px;
-
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;
   opacity: 0;
-
   transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
 }
 
@@ -184,87 +183,68 @@ nav a.active {
   }
 }
 
+/* このブロックは通常のreveal(下からふわっ)を無効化して、子要素だけアニメーションさせる */
+.hero-copy.reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
 
-/* このブロックは通常のreveal(下からふわっ)を無効化して、
-   子要素だけアニメーションさせる */
-   .hero-copy.reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-  
-  /* 1行ごとの初期状態 */
-  .hero-copy-line {
-    overflow: hidden;
+/* 1行ごとの初期状態 */
+.hero-copy-line {
+  overflow: hidden;
+  opacity: 0;
+  clip-path: inset(0 100% 0 0); /* 左から右へ見せる */
+  transform: translateX(-24px);
+  will-change: clip-path, transform, opacity;
+}
+
+/* 表示時 */
+.hero-copy.visible .hero-copy-line {
+  animation: heroLineReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 2行目を少し遅らせる */
+.hero-copy.visible .hero-copy-line:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+@keyframes heroLineReveal {
+  0% {
     opacity: 0;
-    clip-path: inset(0 100% 0 0); /* 左から右へ見せる */
+    clip-path: inset(0 100% 0 0);
     transform: translateX(-24px);
-    will-change: clip-path, transform, opacity;
   }
-  
-  /* 表示時 */
-  .hero-copy.visible .hero-copy-line {
-    animation: heroLineReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translateX(0);
   }
-  
-  /* 2行目を少し遅らせる */
-  .hero-copy.visible .hero-copy-line:nth-child(2) {
-    animation-delay: 0.18s;
-  }
-  
-  @keyframes heroLineReveal {
-    0% {
-      opacity: 0;
-      clip-path: inset(0 100% 0 0);
-      transform: translateX(-24px);
-    }
-    100% {
-      opacity: 1;
-      clip-path: inset(0 0 0 0);
-      transform: translateX(0);
-    }
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
-    .hero-copy-line {
-      opacity: 1;
-      clip-path: inset(0 0 0 0);
-      transform: none;
-      animation: none !important;
-    }
-  }
-  
+}
 
-  @font-face {
-    font-family: "LINESeedJP";
-    src: url("../fonts/LINESeedJP-Thin.woff") format("woff");
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy-line {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: none;
+    animation: none !important;
   }
-  
-  @font-face {
-    font-family: "LINESeedJP";
-    src: url("../fonts/LINESeedJP-Regular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "LINESeedJP";
-    src: url("../fonts/LINESeedJP-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "LINESeedJP";
-    src: url("../fonts/LINESeedJP-ExtraBold.woff") format("woff");
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-  }
-  
+}
 
+/* ============================================
+   ローディング＆アニメーション待機制御 (最重要)
+============================================ */
+
+/* bodyに「is-loaded」がつくまでは、Animate.cssを強制停止・非表示にしておく */
+body:not(.is-loaded) .animate__animated {
+  animation-play-state: paused !important;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Reveal（スクロール表示）も、ローディング中は発動させない */
+body:not(.is-loaded) .reveal {
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+  visibility: hidden;
+}
