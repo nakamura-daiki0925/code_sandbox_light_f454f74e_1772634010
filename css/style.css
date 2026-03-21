@@ -267,3 +267,14 @@ nav a.active {
     font-display: swap;
   }
   
+
+  /* フォント読み込み前は非表示 */
+body:not(.fonts-loaded) h1,
+body:not(.fonts-loaded) h2,
+body:not(.fonts-loaded) .font-line {
+  opacity: 0;
+}
+
+h1, h2, .font-line {
+  transition: opacity 0.3s ease;
+}
