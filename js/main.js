@@ -189,7 +189,7 @@ function initEnvLinks() {
 
   const PATHS = {
     top: isLocal ? "index.html" : `https://${prodDomain}/`,
-    contact: isLocal ? "contact.html" : `https://${prodDomain}/contact.html`, // ← 最後に .html を付け足す！
+    contact: isLocal ? "contact.html" : `https://${prodDomain}/contact.html`, 
   };
 
 
