@@ -189,8 +189,9 @@ function initEnvLinks() {
 
   const PATHS = {
     top: isLocal ? "index.html" : `https://${prodDomain}/`,
-    contact: isLocal ? "contact.html" : `https://${prodDomain}/contact`,
+    contact: isLocal ? "contact.html" : `https://${prodDomain}/contact.html`, // ← 最後に .html を付け足す！
   };
+
 
   const contactLinks = document.querySelectorAll(".js-link-contact");
   contactLinks.forEach((link) => { link.href = PATHS.contact; });
