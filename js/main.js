@@ -1,18 +1,14 @@
 /* =============================================
    1. ローディング制御
 ============================================= */
-// 🌟 Viteのお作法：JSで使う画像は一番上で import する！
-// （※階層が1つ上なので ../ から始めます）
-import logoImg from '../images/common/logo-white3.png';
-import bgGradient from '../images/hero/hero-bg-gradient.png';
-import bgStriped from '../images/hero/background-striped.png';
-import bgArcText from '../images/hero/hero-arc-text.png';
+// ★修正点：importをやめて、直接画像のURL（文字列）を変数に入れます！
+const logoImg = 'images/common/logo-white3.png';
 
 // インポートした変数を使って配列を作る
 const BG_IMAGES = [
-  bgGradient,
-  bgStriped,
-  bgArcText,
+  'images/hero/hero-bg-gradient.png',
+  'images/hero/background-striped.png',
+  'images/hero/hero-arc-text.png',
 ];
 
 // ローディングオーバーレイを作成
@@ -30,7 +26,7 @@ function createLoader() {
     transition: opacity 0.4s ease;
   `;
   
-  // 🌟 imgタグの src の中身を、上でインポートした変数（logoImg）に書き換え！
+  // ★ imgタグの src に、上の変数がそのまま入ります
   loader.innerHTML = `
     <img src="${logoImg}" alt="" style="width:120px;height:auto;animation:pulse 1.2s ease-in-out infinite;" />
     <style>
