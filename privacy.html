@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>プライバシーポリシー | EC家計簿</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "ec-green": "#29b051",
+              "ec-green-dark": "#067f38",
+              "ec-orange": "#f39800",
+              "ec-green-pale": "#f0faf4",
+            },
+            fontFamily: { sans: ["Noto Sans JP", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <header
+      id="header"
+      class="fixed top-0 left-0 w-full z-50 text-white shadow-md bg-[#009e46]"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between h-16 lg:h-20"
+      >
+        <a
+          href="index.html"
+          class="flex items-center shrink-0 hover:opacity-80 transition-opacity"
+        >
+          <img
+            src="images/common/logo-white3.png"
+            alt="EC家計簿"
+            class="h-8 lg:h-10 w-auto object-contain"
+          />
+        </a>
+
+        <nav
+          class="hidden lg:flex items-center gap-6 text-sm tracking-wide font-bold"
+        >
+          <a href="index.html#about" class="hover:opacity-70 transition-opacity">EC家計簿とは？</a>
+          <a href="index.html#reasons" class="hover:opacity-70 transition-opacity">選ばれる理由</a>
+          <a href="index.html#cases" class="hover:opacity-70 transition-opacity">導入事例</a>
+          <a href="index.html#flow" class="hover:opacity-70 transition-opacity">導入までの流れ</a>
+          <a href="index.html#news" class="hover:opacity-70 transition-opacity">お知らせ</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-3">
+          <a
+            href="index.html"
+            class="text-sm bg-white text-ec-green-dark px-6 py-3 font-bold hover:bg-gray-100 transition-colors rounded shadow-md"
+          >
+            TOPへ戻る
+          </a>
+        </div>
+
+        <button
+          id="menu-btn"
+          class="flex lg:hidden flex-col gap-1.5 p-2"
+          aria-label="メニュー"
+        >
+          <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+          <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+          <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="fixed top-0 right-0 h-full w-64 bg-white shadow-xl flex flex-col px-6 py-8 gap-4 z-50 translate-x-full transition-transform duration-300 lg:hidden"
+      >
+        <button
+          id="menu-close"
+          class="self-end text-gray-500 hover:text-gray-800 mb-2"
+        >
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <div class="flex flex-col gap-4 font-bold">
+          <a href="index.html#about" class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors">EC家計簿とは？</a>
+          <a href="index.html#reasons" class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors">選ばれる理由</a>
+          <a href="index.html#cases" class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors">導入事例</a>
+          <a href="index.html#flow" class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors">導入までの流れ</a>
+          <a href="index.html#news" class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors">お知らせ</a>
+          <div class="flex flex-col gap-3 mt-4">
+            <a href="index.html" class="text-center bg-[#004d25] text-white px-4 py-3 rounded font-bold">TOPへ戻る</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+      <div
+        class="bg-[#009e46] py-12 text-center text-white relative overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 opacity-20"
+          style="
+            background-image: url('images/hero/hero-bg-gradient.png');
+            background-size: cover;
+          "
+        ></div>
+        <div class="relative z-10">
+          <h1 class="text-3xl lg:text-4xl font-black mb-2">プライバシーポリシー</h1>
+          <p class="text-sm opacity-90">Privacy Policy</p>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 lg:px-8 py-16">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 lg:p-14 text-sm lg:text-base text-gray-700 leading-relaxed">
+          
+          <p class="mb-4">
+            本プライバシーポリシー（以下「本ポリシー」といいます。）は、株式会社Ritaen（以下「当社」といいます。）が提供する「EC家計簿」およびその関連ウェブサイト、管理画面、アプリケーション等（以下総称して「本サービス」といいます。）において、利用者（法人・個人を問いません。以下「利用者」といいます。）に関して当社が取得・利用する情報（個人情報を含みます。）の取扱いについて定めるものです。
+          </p>
+          <p class="mb-8">
+            本ポリシーは、本サービスに関連して取得される情報に適用されます。当社が本サービス以外（当社コーポレートサイト、採用活動、一般のお問い合わせ等）において取得する情報については、別途定めるプライバシーポリシー等が適用されます。
+          </p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">1. 取得する情報</h2>
+          <p class="mb-4">当社は、本サービスの提供・運営のため、以下の情報を取得することがあります。</p>
+          
+          <h3 class="font-bold text-gray-800 mt-6 mb-3">(1) 利用者が直接提供する情報</h3>
+          <ul class="list-disc pl-6 mb-6 space-y-1.5 text-gray-600">
+            <li>氏名、会社名、部署名、役職</li>
+            <li>メールアドレス、電話番号等の連絡先</li>
+            <li>アカウント情報（ログインID等）</li>
+            <li>契約情報（プラン内容、利用開始日、請求先情報、契約管理情報）</li>
+            <li>お問い合わせ、サポート対応に関する情報（問い合わせ内容、添付資料等）</li>
+          </ul>
+
+          <h3 class="font-bold text-gray-800 mt-6 mb-3">(2) ECデータ・業務データ（入力・アップロード・外部連携）</h3>
+          <p class="mb-3">利用者が本サービスに入力、アップロード、または外部サービスとの連携により当社が取得する情報には、以下が含まれます。</p>
+          <ul class="list-disc pl-6 mb-4 space-y-1.5 text-gray-600">
+            <li>店舗情報（店舗URL、店舗ID、モール・カート種別、権限設定等）</li>
+            <li>受注、売上、返品、キャンセル、顧客対応に関する情報</li>
+            <li>商品情報（SKU、商品名、カテゴリ、価格、在庫等）</li>
+            <li>広告・販促情報（広告費、媒体別実績、クーポン、ポイント施策等）</li>
+            <li>原価、送料、手数料等の費用情報、利益計算に必要な情報</li>
+            <li>データ統合・集計のための設定情報（項目対応、計算ルール等）</li>
+          </ul>
+          <p class="bg-gray-50 p-4 rounded text-xs lg:text-sm text-gray-500 mb-6">
+            ※これらには、利用者の店舗運営に関連して、利用者の顧客（エンドユーザー）に関する情報が含まれる場合があります。当社は、これらを本サービス提供の目的に必要な範囲で、利用者の設定・指示・許可に基づき取り扱います。
+          </p>
+
+          <h3 class="font-bold text-gray-800 mt-6 mb-3">(3) 利用状況・端末情報・ログ（自動取得）</h3>
+          <ul class="list-disc pl-6 mb-6 space-y-1.5 text-gray-600">
+            <li>IPアドレス、ブラウザ種別、OS、端末識別子、言語設定</li>
+            <li>アクセスログ、操作ログ、閲覧ページ、参照元URL、滞在時間</li>
+            <li>Cookieその他類似技術により取得される識別子・行動情報</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">2. 取得方法</h2>
+          <p class="mb-3">当社は、以下の方法により情報を取得します。</p>
+          <ul class="list-disc pl-6 mb-6 space-y-1.5 text-gray-600">
+            <li>利用者による入力、アップロード、フォーム送信</li>
+            <li>本サービスの利用に伴い自動的に生成されるログ情報</li>
+            <li>利用者が連携を許可した外部サービス（楽天RMS、Yahoo、Amazon、Shopify等）とのAPI連携</li>
+            <li>Cookie等を用いた自動取得</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">3. 利用目的</h2>
+          <p class="mb-3">当社は、取得した情報を以下の目的で利用します。</p>
+          <ul class="list-disc pl-6 mb-6 space-y-1.5 text-gray-600">
+            <li>本サービスの提供、運用、維持、保護</li>
+            <li>アカウント登録、本人確認、認証、権限管理</li>
+            <li>利用料金の計算、請求、決済、契約管理</li>
+            <li>お問い合わせ対応、サポート提供、障害対応</li>
+            <li>機能改善、UI/UX改善、品質向上、保守</li>
+            <li>不正利用防止、セキュリティ対応、規約違反の調査・対応</li>
+            <li>利用状況の分析、統計情報の作成（個別の企業・個人を識別できない形）</li>
+            <li>新機能、関連サービス、セミナー等の案内（配信停止手段を含む）</li>
+            <li>法令または行政機関等からの要請への対応</li>
+            <li>合併、会社分割、事業譲渡等の組織再編に伴う手続</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">4. 決済情報の取扱い</h2>
+          <p class="mb-2">本サービスの利用料金の決済にあたり、当社は決済代行事業者（GMOグループを含む）を利用します。</p>
+          <p class="mb-2">クレジットカード情報等の決済情報は、原則として決済代行事業者が取得・管理し、当社はこれを保持しません。</p>
+          <p class="mb-6">当社は、決済結果、取引識別子、課金状態等、請求・契約管理に必要な情報のみを受領し、利用します。</p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">5. 外部サービス連携</h2>
+          <p class="mb-4">本サービスは、利用者の選択・設定により、外部サービスと連携します。</p>
+          
+          <h3 class="font-bold text-gray-800 mt-6 mb-3">(1) 認証情報の取扱い</h3>
+          <p class="mb-3">APIキー、アクセストークン等の連携認証情報は、以下の原則に従って取り扱います。</p>
+          <ul class="list-disc pl-6 mb-4 space-y-1.5 text-gray-600">
+            <li>利用目的限定</li>
+            <li>必要最小限の権限</li>
+            <li>適切な安全管理措置の下での保管</li>
+            <li>連携解除時または不要と判断した場合の削除・無効化</li>
+          </ul>
+          <p class="bg-gray-50 p-4 rounded text-xs lg:text-sm text-gray-500 mb-6">
+            ※法令対応、障害解析、セキュリティ確保等のため、一定期間保持する場合があります。
+          </p>
+
+          <h3 class="font-bold text-gray-800 mt-6 mb-3">(2) 外部サービス提供者の責任範囲</h3>
+          <p class="mb-6">外部サービス提供者による情報の取扱いについては、当該提供者の規約・ポリシーに従うものとし、当社は合理的な範囲を超えて責任を負いません。</p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">6. AI等を用いた処理</h2>
+          <p class="mb-2">当社は、分析、分類、要約、改善提案等の機能提供のため、統計処理、機械学習、生成AI等の技術（第三者APIを含む）を利用する場合があります。</p>
+          <p class="mb-6">この場合も、本ポリシーに定める利用目的の範囲内でのみ情報を取り扱います。</p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">7. 第三者提供</h2>
+          <p class="mb-3">当社は、以下の場合を除き、利用者情報を第三者に提供しません。</p>
+          <ul class="list-disc pl-6 mb-6 space-y-1.5 text-gray-600">
+            <li>利用者の同意がある場合</li>
+            <li>法令に基づく場合</li>
+            <li>人の生命・身体・財産の保護に必要な場合</li>
+            <li>公衆衛生の向上または児童の健全育成の推進のために特に必要な場合</li>
+            <li>国の機関等への協力が必要な場合</li>
+            <li>事業承継に伴い必要な範囲で提供する場合</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">8. 委託</h2>
+          <p class="mb-2">当社は、本サービス運営に必要な範囲で、クラウド、決済、分析、サポート、開発・保守等を外部事業者に委託する場合があります。</p>
+          <p class="mb-6">当社は、委託先に対し適切な契約締結および監督を行います。</p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">9. Cookie等の利用</h2>
+          <p class="mb-2">当社は、利便性向上、利用状況分析、品質改善のため、Cookie等を利用する場合があります。</p>
+          <p class="mb-6">Cookieを無効化した場合、一部機能が利用できないことがあります。</p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">10. 保存期間・削除</h2>
+          <p class="mb-2">当社は、利用目的の達成に必要な期間、または法令上必要な期間、情報を保存します。</p>
+          <p class="mb-6">利用契約終了後も、法令対応、会計・監査、紛争対応、セキュリティ確保のため、一定期間保存する場合があります。</p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">11. 安全管理措置</h2>
+          <p class="mb-6">当社は、漏えい、滅失、毀損、不正アクセス等を防止するため、合理的かつ適切な安全管理措置を講じます。</p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">12. 開示等の請求</h2>
+          <p class="mb-6">利用者本人からの開示、訂正、利用停止等の請求については、法令に従い、本人確認の上、合理的な範囲で対応します。</p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">13. 未成年の利用</h2>
+          <p class="mb-6">未成年者が利用する場合は、法定代理人の同意を得た上で利用してください。</p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">14. 本ポリシーの変更</h2>
+          <p class="mb-6">当社は、法令改正、機能追加、運用変更等に応じて本ポリシーを改定することがあります。</p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">15. お問い合わせ窓口</h2>
+          <div class="bg-gray-50 rounded-lg p-6 mb-6">
+            <p class="font-bold mb-2">株式会社Ritaen（EC家計簿 お問い合わせ窓口）</p>
+            <p>メールアドレス：<a href="mailto:info@ritaen.com" class="text-ec-green hover:underline">info@ritaen.com</a></p>
+          </div>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">16. 事業者情報</h2>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <ul class="space-y-2">
+              <li><span class="font-bold inline-block w-40">個人情報取扱事業者：</span>株式会社Ritaen</li>
+              <li><span class="font-bold inline-block w-40">代表者：</span>田中 健裕</li>
+              <li><span class="font-bold inline-block w-40">所在地：</span>〒112-0005 東京都文京区水道1丁目2-10</li>
+              <li><span class="font-bold inline-block w-40">制定日：</span>2026年1月13日</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-white pb-8 border-t border-gray-100">
+      <div class="max-w-5xl mx-auto px-4 lg:px-8 pt-12">
+        <div class="flex justify-center mb-8">
+          <a href="index.html">
+            <img
+              src="images/common/logo-green.png"
+              alt="EC家計簿"
+              class="h-12 w-auto object-contain"
+            />
+          </a>
+        </div>
+        <div class="text-center text-gray-400 text-xs">© Ritaen 2026</div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menu-btn");
+        const menuClose = document.getElementById("menu-close");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const hamburgerLines = document.querySelectorAll(".hamburger-line");
+        const mobileLinks = document.querySelectorAll(".mobile-link");
+
+        const closeMenu = () => {
+          mobileMenu.classList.add("translate-x-full");
+          mobileMenu.classList.remove("translate-x-0");
+          hamburgerLines.forEach((line) => {
+            line.classList.remove("bg-gray-800");
+            line.classList.add("bg-white");
+          });
+        };
+
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("translate-x-full");
+          mobileMenu.classList.toggle("translate-x-0");
+          if (mobileMenu.classList.contains("translate-x-0")) {
+            hamburgerLines.forEach((line) => {
+              line.classList.remove("bg-white");
+              line.classList.add("bg-gray-800");
+            });
+          } else {
+            closeMenu();
+          }
+        });
+
+        menuClose.addEventListener("click", closeMenu);
+
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+      });
+    </script>
+  </body>
+</html>
