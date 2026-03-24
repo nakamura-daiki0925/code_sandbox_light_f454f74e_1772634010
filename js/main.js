@@ -103,13 +103,26 @@ function startMainScripts() {
 function initMobileMenu() {
   const btn = document.getElementById("menu-btn");
   const menu = document.getElementById("mobile-menu");
+  const closeBtn = document.getElementById("menu-close"); // 🌟 ×ボタンを取得
   const lines = document.querySelectorAll(".hamburger-line");
 
   if (!btn || !menu) return;
 
+  // 🌟 メニューを閉じる処理を1つにまとめる（使い回し用）
+  const closeMenu = () => {
+    menu.classList.add("translate-x-full");
+    btn.classList.remove("open");
+    lines.forEach((line) => {
+      line.classList.remove("bg-gray-800");
+      line.classList.add("bg-white");
+    });
+  };
+
+  // ハンバーガーボタンを押した時の処理
   btn.addEventListener("click", () => {
     const isClosed = menu.classList.contains("translate-x-full");
     if (isClosed) {
+      // 開く
       menu.classList.remove("translate-x-full");
       btn.classList.add("open");
       lines.forEach((line) => {
@@ -117,24 +130,19 @@ function initMobileMenu() {
         line.classList.add("bg-gray-800");
       });
     } else {
-      menu.classList.add("translate-x-full");
-      btn.classList.remove("open");
-      lines.forEach((line) => {
-        line.classList.remove("bg-gray-800");
-        line.classList.add("bg-white");
-      });
+      // 閉じる
+      closeMenu();
     }
   });
 
+  // 🌟 ×ボタンを押した時に閉じる
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeMenu);
+  }
+
+  // リンクを押した時に閉じる
   menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menu.classList.add("translate-x-full");
-      btn.classList.remove("open");
-      lines.forEach((line) => {
-        line.classList.remove("bg-gray-800");
-        line.classList.add("bg-white");
-      });
-    });
+    link.addEventListener("click", closeMenu);
   });
 }
 
