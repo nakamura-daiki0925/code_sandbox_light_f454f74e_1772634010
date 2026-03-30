@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>サービス利用規約 | EC家計簿</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "ec-green": "#29b051",
+              "ec-green-dark": "#067f38",
+              "ec-orange": "#f39800",
+              "ec-green-pale": "#f0faf4",
+            },
+            fontFamily: { sans: ["Noto Sans JP", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <header
+      id="header"
+      class="fixed top-0 left-0 w-full z-50 text-white shadow-md bg-[#009e46]"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between h-16 lg:h-20"
+      >
+        <a
+          href="index.html"
+          class="flex items-center shrink-0 hover:opacity-80 transition-opacity"
+        >
+          <img
+            src="images/common/logo-white3.png"
+            alt="EC家計簿"
+            class="h-8 lg:h-10 w-auto object-contain"
+          />
+        </a>
+
+        <nav
+          class="hidden lg:flex items-center gap-6 text-sm tracking-wide font-bold"
+        >
+          <a href="index.html#about" class="hover:opacity-70 transition-opacity">EC家計簿とは？</a>
+          <a href="index.html#reasons" class="hover:opacity-70 transition-opacity">選ばれる理由</a>
+          <a href="index.html#cases" class="hover:opacity-70 transition-opacity">導入事例</a>
+          <a href="index.html#flow" class="hover:opacity-70 transition-opacity">導入までの流れ</a>
+          <a href="index.html#news" class="hover:opacity-70 transition-opacity">お知らせ</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-3">
+          <a
+            href="index.html"
+            class="text-sm bg-white text-ec-green-dark px-6 py-3 font-bold hover:bg-gray-100 transition-colors rounded shadow-md"
+          >
+            TOPへ戻る
+          </a>
+        </div>
+
+        <button
+          id="menu-btn"
+          class="flex lg:hidden flex-col gap-1.5 p-2"
+          aria-label="メニュー"
+        >
+          <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+          <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+          <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="fixed top-0 right-0 h-full w-64 bg-white shadow-xl flex flex-col px-6 py-8 gap-4 z-50 translate-x-full transition-transform duration-300 lg:hidden"
+      >
+        <button
+          id="menu-close"
+          class="self-end text-gray-500 hover:text-gray-800 mb-2"
+        >
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <div class="flex flex-col gap-4 font-bold">
+          <a href="index.html#about" class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors">EC家計簿とは？</a>
+          <a href="index.html#reasons" class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors">選ばれる理由</a>
+          <a href="index.html#cases" class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors">導入事例</a>
+          <a href="index.html#flow" class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors">導入までの流れ</a>
+          <a href="index.html#news" class="mobile-link text-gray-800 py-3 border-b border-gray-100 hover:text-[#00703C] transition-colors">お知らせ</a>
+          <div class="flex flex-col gap-3 mt-4">
+            <a href="index.html" class="text-center bg-[#004d25] text-white px-4 py-3 rounded font-bold">TOPへ戻る</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow pt-16">
+      <div
+        class="bg-[#009e46] py-12 text-center text-white relative overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 opacity-20"
+          style="
+            background-image: url('images/hero/hero-bg-gradient.png');
+            background-size: cover;
+          "
+        ></div>
+        <div class="relative z-10">
+          <h1 class="text-3xl lg:text-4xl font-black mb-2">サービス利用規約</h1>
+          <p class="text-sm opacity-90">Terms of Service</p>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 lg:px-8 py-16">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 sm:p-8 lg:p-14 text-sm lg:text-base text-gray-700 leading-relaxed break-words">
+          
+          <p class="mb-4">
+            本利用規約(以下「本規約」といいます。)は、株式会社 Ritaen (以下「当社」といいます。)が提供する「EC 家計簿」(以下「本サービス」といいます。)の利用条件および当社とユーザーとの間の権利義務関係を定めるものです。
+          </p>
+          <p class="mb-4">
+            ユーザーは、本規約の全文を確認し、同意のうえ本サービスを利用するものとし、本サービスの利用開始時点で本規約に同意したものとみなされます。
+          </p>
+          <p class="mb-8">
+            また、当社サイト、ヘルプ、ガイドライン、料金表、その他本サービスに関して当社が定める条件は、本規約の一部を構成します。
+          </p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第1条(定義)</h2>
+          <p class="mb-4">本規約において用いる用語の定義は、以下のとおりとします。</p>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>「当社サイト」とは、当社が管理・運営するウェブサイトその他当社が指定する媒体をいいます。</li>
+            <li><span class="font-bold mr-2">2.</span>「利用契約」とは、当社とユーザーとの間で締結される、本サービスの利用に関する契約をいい、本規約その他当社が定めた条件等を含みます。</li>
+            <li><span class="font-bold mr-2">3.</span>「登録希望者」とは、本サービスの利用を希望し、利用契約の申込みを行い、または行おうとする者をいいます。</li>
+            <li><span class="font-bold mr-2">4.</span>「ユーザー」とは、当社が本サービスの利用を承諾した法人または団体(事業者)をいいます。</li>
+            <li><span class="font-bold mr-2">5.</span>「利用者」とは、ユーザーに所属し、現実に本サービスを利用する役員・従業員等をいいます。</li>
+            <li><span class="font-bold mr-2">6.</span>「アカウント」とは、当社がユーザーに付与する本サービス利用のための識別情報(ID、パスワード、認証情報その他これに準ずるもの)をいいます。</li>
+            <li><span class="font-bold mr-2">7.</span>「ユーザーデータ」とは、ユーザーまたは利用者が本サービスに入力、連携、アップロード、送信その他の方法により当社に提供する一切のデータ(売上、広告費、原価、在庫、SKU、顧客情報、受注情報、CSV、API連携データ、設定情報等を含みます。)をいいます。</li>
+            <li><span class="font-bold mr-2">8.</span>「外部サービス」とは、楽天RMS、広告媒体、物流/WMS、会計ソフトその他、本サービスと連携しうる第三者のサービス、システム、API、データソースをいいます。</li>
+            <li><span class="font-bold mr-2">9.</span>「知的財産権」とは、著作権(著作権法第27条および第28条の権利を含みます。)、特許権、実用新案権、意匠権、商標権その他一切の知的財産に関する権利(それらの権利を取得し、または登録を受ける権利を含みます。)をいいます。</li>
+            <li><span class="font-bold mr-2">10.</span>「機密情報」とは、技術情報、営業情報、顧客情報、事業計画、システム仕様、ユーザーデータその他一切の非公知情報であって、開示時に機密である旨明示されたもの、またはその性質上機密であると合理的に認識される情報をいいます。ただし、①開示時点で公知であった情報、②開示後被開示者の責によらず公知となった情報、③正当な権限を有する第三者から守秘義務なく取得した情報、④法令または裁判所の命令により開示が義務付けられた情報、⑤被開示者が当該機密情報に依拠することなく独自に開発・取得した情報は、除外します。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第2条(適用)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>本規約は、本サービスの提供条件および本サービスの利用に関する当社とユーザーとの権利義務関係を定め、当社とユーザーとの間の本サービスの利用に関する一切の関係に適用されます。</li>
+            <li><span class="font-bold mr-2">2.</span>本規約の内容と当社とユーザー間で個別に定めた条件等の内容が矛盾・抵触する場合、条件等に特段の留保がない限り、本規約が優先して適用されます。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第3条(本規約の変更)</h2>
+          <p class="mb-3"><span class="font-bold mr-2">1.</span>当社は、以下の各号のいずれかに該当するときは、民法第548条の4の規定に基づき、本約款の変更により変更後の約款の条項について合意があったものとみなし、個別に申込者と合意することなく本契約の内容を変更できます。この場合において、分割払金の支払その他の条件は、変更後本約款によるものとします。</p>
+          <ul class="list-none pl-6 mb-4 space-y-1.5 text-gray-600">
+            <li>(1) 本約款の変更が、申込者の一般の利益に適合するとき。</li>
+            <li>(2) 本約款の変更が、契約をした目的に反せず、かつ、変更の必要性、変更後の内容の相当性及びその内容その他の変更に係る事情に照らして合理的なものであるとき</li>
+          </ul>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">2.</span>当社は、前項の変更等を行う場合、ユーザーに対して、変更後の内容および適用開始日を当社サイトへの掲示その他当社が適切と判断する方法により周知します。</li>
+            <li><span class="font-bold mr-2">3.</span>本規約の変更は、前項の周知の時点より効力を生じるものとします。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第4条(利用申込み・承諾)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>登録希望者は、本規約を遵守することに同意し、当社所定の方法で申込みを行うことにより、当社に対し利用契約の申込みを行うことができます。</li>
+            <li><span class="font-bold mr-2">2.</span>当社は、当社の基準に従い利用契約の申込みの可否を判断し、承諾する場合には当社所定の方法で通知します。利用契約は、当社が承諾通知を行った時点で成立します。</li>
+            <li><span class="font-bold mr-2">3.</span>当社は、登録希望者が以下の各号のいずれかに該当する場合、申込みを拒否し、または承諾後であっても承諾を取り消すことができます。なお、当社は、申込みの許否および承諾の取り消しの理由を開示する義務を負いません。
+              <ul class="list-none pl-6 mt-3 space-y-1.5 text-gray-600">
+                <li>(1) 申込み内容に虚偽、誤記または記載漏れがある場合</li>
+                <li>(2) 既にアカウントを所持している場合</li>
+                <li>(3) 登録希望者及びユーザーと利用者が異なる場合</li>
+                <li>(4) 第三者に対して譲渡、利用許諾、貸与、売買又は質入等(以下「譲渡等」といいます。)をした場合</li>
+                <li>(5) 反社会的勢力(第22条に定義)に該当する、または関与があると当社が判断した場合</li>
+                <li>(6) 過去に当社との契約に違反した者またはその関係者である場合</li>
+                <li>(7) 第16条(禁止事項)に違反するおそれがあると当社が判断した場合</li>
+                <li>(8) その他当社が不適当と判断した場合</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第5条(未成年者の利用)</h2>
+          <p class="mb-6">
+            本サービスは原則として事業者向けサービスです。未成年者が利用者として本サービスを利用する場合、ユーザーは、未成年者の法定代理人がした営業許可または同意を証明する義務を負うものとします。ユーザーが当該義務を履行することなく未成年者の利用に関して生じた一切の責任は、ユーザーが負うものとします。
+          </p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第6条(登録事項の変更)</h2>
+          <p class="mb-6">
+            ユーザーは、申込みに際して届け出た事項に変更が生じた場合、当社所定の方法で遅滞なく当社に通知するものとします。ユーザーが通知を怠ったことによりユーザーまたは第三者に損害が生じても、当社は責任を負いません。
+          </p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第7条(アカウント管理)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>当社は、利用契約成立後、ユーザーに対しアカウントを付与します。</li>
+            <li><span class="font-bold mr-2">2.</span>ユーザーは、自己の責任においてアカウントを適切に管理・保管し、第三者に譲渡等をしてはなりません。</li>
+            <li><span class="font-bold mr-2">3.</span>ユーザーは、利用者による利用を含め、本サービス上でなされた一切の行為をユーザー自身の行為とみなされることに同意します。</li>
+            <li><span class="font-bold mr-2">4.</span>アカウントの管理不十分、使用上の過誤、第三者による不正使用等によりユーザーに損害が生じても、当社は責任を負いません。ただし、当社の故意または重過失による場合は、この限りではありません。</li>
+            <li><span class="font-bold mr-2">5.</span>ユーザーは、アカウントの管理不十分または利用者の管理不備により、ユーザーデータまたはユーザーの機密情報が第三者に漏えいした場合、自己の責任においてこれを解決するものとします。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第8条(利用者)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>ユーザーは、本サービスを利用するにあたり利用者を設定し、利用者にそれぞれアカウントを付与します。</li>
+            <li><span class="font-bold mr-2">2.</span>利用者は、同一のアカウントを複数人で共有し、又は共同して利用することはできません。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第9条(本サービスの内容)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>本サービスは、ユーザーが提供するユーザーデータおよび外部サービス等から取得したデータをもとに、売上・費用・利益等の集計、可視化、分析支援等の機能を提供するサービスです。</li>
+            <li><span class="font-bold mr-2">2.</span>本サービスの機能、仕様、表示項目、連携可能な外部サービス等は、当社サイト等に定めるとおりとし、当社は当社の判断で随時追加、変更、削除できるものとします。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第10条(利用料金・支払)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>本サービスに関する利用料金、課金単位、請求サイクル、支払方法その他料金条件は、当社サイトへの掲示または当社とユーザーの別途合意 (申込書、見積書、注文書等)により定めます。</li>
+            <li><span class="font-bold mr-2">2.</span>ユーザーは、当社が指定する期日までに、利用料金を一括して(当社が個別に分割払いを承認した場合を除きます。)、当社指定の方法で支払うものとします。振込手数料その他支払に要する費用は、ユーザー負担とします。</li>
+            <li><span class="font-bold mr-2">3.</span>ユーザーが支払期日までに利用料金を支払わない場合、ユーザーは、当社に対し、支払期日の翌日から支払完了日まで、年14.6%の割合による遅延損害金を支払うものとします。</li>
+            <li><span class="font-bold mr-2">4.</span>本サービスの利用開始日以降、理由の如何を問わず、既に支払われた利用料金は、返金されません。ただし、当社が別途書面で認めた場合は、この限りではありません。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第11条(サポート・オンボーディング)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>当社は、当社が定める範囲・方法により本サービスに関するサポートを提供します。通常のサポート対応時間は、平日 10:00~17:00 (日本時間) とします(当社が別途定める休業日を除きます)。</li>
+            <li><span class="font-bold mr-2">2.</span>本サービスに関する初期設定・オンボーディング支援は、当社が別途提示する条件に従い有償で提供します。ただし、当社の裁量によりキャンペーン等で無償提供する場合があります。</li>
+            <li><span class="font-bold mr-2">3.</span>サポート内容、回数、範囲、納期、成果物の有無等は、当社サイトへの掲示または当社とユーザーの別途合意により定めます。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第12条(外部サービス連携)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>本サービスは外部サービスとの連携機能を提供する場合がありますが、当社は、外部サービスの内容、正確性、完全性、継続性、適法性、可用性、仕様等を保証しません。</li>
+            <li><span class="font-bold mr-2">2.</span>外部サービスの仕様変更、API制限、提供停止、障害、遅延、欠損、アカウント制限等により、本サービスの全部または一部が利用できない場合があっても、当社は、一切責任を負いません。</li>
+            <li><span class="font-bold mr-2">3.</span>前項の場合であっても当社は必要に応じて改修・対応を検討しますが、当該改修の実施可否、時期、内容は、当社の裁量により決定します。改修までの期間に本サービスの全部または一部が利用できない場合であっても、本サービスの利用料金は、通常どおり発生します</li>
+            <li><span class="font-bold mr-2">4.</span>ユーザーは、外部サービスの利用に関する契約関係、アカウント管理、権限設定、API キー等の管理および当該外部サービスの利用条件の遵守について、自己の責任において行うものとします。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第13条(稼働・中断等:SLA を設けない)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>当社は、本サービスの可用性、稼働率、特定の停止時間以内での復旧等について数値保証(SLA)を行いません。</li>
+            <li><span class="font-bold mr-2">2.</span>当社は、本サービスの保守、点検、障害対応、仕様変更その他必要がある場合、本サービスの全部または一部を一時的に中断または停止できるものとします。</li>
+            <li><span class="font-bold mr-2">3.</span>前項に基づき本サービスの全部または一部を中断または停止する場合、当社は、可能な範囲でユーザーへの事前通知に努めますが、緊急時など当社がやむを得ないと判断した場合は、事前通知なく本サービスを中断または停止できるものとします。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第14条(ユーザーデータの権利および利用)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>ユーザーは、ユーザーデータを本サービスに提供することにつき、適法かつ正当な権限を有し、当該提供が法令および第三者との契約に違反しないことおよび、虚偽のユーザーデータを提供しないことを表明し、保証します。</li>
+            <li><span class="font-bold mr-2">2.</span>ユーザーデータに関する権利は、ユーザーまたは正当な権利者に帰属します。</li>
+            <li><span class="font-bold mr-2">3.</span>ユーザーは、当社に対し、本サービスの提供、運用、保守、障害対応、バックアップ、セキュリティ確保その他本サービス提供に合理的に必要な範囲で、ユーザーデータを利用(複製、変換、解析、保存、連携、送信を含みます。)する権利を許諾します。</li>
+            <li><span class="font-bold mr-2">4.</span>当社は、ユーザーデータを統計化・匿名化または個別の企業・個人を識別できない形に加工したうえで、本サービスの品質向上、機能改善、分析、開発、セキュリティ強化の目的に限り利用できるものとします。</li>
+            <li><span class="font-bold mr-2">5.</span>当社は、本サービスの提供、運用、保守、障害対応、バックアップ、セキュリティ確保その他本サービス提供に際してやむを得ない場合、事前又は事後の承諾を得ることでユーザーのアカウントへのログイン、及び同アカウントの操作等を行うことができます。ただし、事後の承諾は、事前の承諾を得ることができない場合に限ります。</li>
+            <li><span class="font-bold mr-2">6.</span>当社は、ユーザーデータの正確性、完全性、有用性、最新性について確認・検証義務を負いません。</li>
+            <li><span class="font-bold mr-2">7.</span>ユーザーは、外部サービスから取得されたデータについて、当該外部サービスの利用規約その他の条件に違反しない範囲で本サービスへ提供するものとし、当該データの提供および利用に関して第三者との間で紛争が生じた場合、ユーザーの責任において解決するものとします。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第15条(分析結果等の位置付け・非保証)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>本サービスが表示・出力する集計結果、分析結果、示唆、推奨、レポート等(以下「分析結果等」といいます。)は、ユーザーデータおよび外部サービス等から取得した情報を一定の手法で加工・表示するものであり、当社は、その正確性、完全性、適時性、特定目的適合性を保証しません。</li>
+            <li><span class="font-bold mr-2">2.</span>ユーザーは、分析結果等を自己の責任と判断で利用し、最終的な意思決定および実行はユーザー自身が行うものとします。当社は、分析結果等に基づくユーザーの意思決定・行為の結果について責任を負いません。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第16条(助言非該当)</h2>
+          <p class="mb-6">
+            本サービスおよび当社が提供する情報 (サポート、資料、口頭説明等を含みます。)は、会計、税務、法務その他専門的助言を目的とするものではありません。ユーザーは、必要に応じて税理士、弁護士等の専門家に相談するものとします。
+          </p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第17条(コンテンツ利用および禁止事項)</h2>
+          <p class="mb-3">ユーザーおよび利用者は、本サービスの利用にあたり、以下の行為をしてはなりません。</p>
+          <ul class="list-none pl-6 mb-6 space-y-1.5 text-gray-600">
+            <li>(1) 法令、公序良俗、本規約または条件等に違反する行為</li>
+            <li>(2) 他のユーザーその他第三者に対しアカウントを譲渡又は貸与する行為</li>
+            <li>(3) 同じ利用者が複数のアカウントを所持、利用する行為</li>
+            <li>(4) 第三者の知的財産権、プライバシー、その他権利を侵害する行為</li>
+            <li>(5) 本サービスまたは当社のサーバー、ネットワークに過度な負荷をかける行為</li>
+            <li>(6) 当社の事前承諾なく、本サービスまたは外部サービスに対してスクレイピング、クローリング、ボット等によりアクセスする行為</li>
+            <li>(7) 当社の事前承諾なく、本サービスのAPI (提供する場合)を利用した大量取得、再配布、二次提供、または当社が想定しない方法での連携を行う行為</li>
+            <li>(8) 本サービスのソースコード、構造、仕様等を解析する行為 (リバースエンジニアリング、逆コンパイル、逆アセンブルその他一切の解析行為を含みます。)</li>
+            <li>(9) 不正アクセス、クラッキング、アカウントの不正取得、なりすまし</li>
+            <li>(10) 他のユーザーのユーザーデータその他の情報を閲覧、改ざん、消去する行為</li>
+            <li>(11) 当社または第三者の信用を毀損する行為、業務を妨害する行為</li>
+            <li>(12) その他当社が不適切と判断する行為</li>
+            <li>(13) 外部サービスの利用規約、API利用条件その他第三者が定める条件に違反して取得されたデータを、本サービスに入力、連携、アップロード又は利用する行為</li>
+            <li>(14) 第三者の営業秘密、個人情報又は権利を侵害するおそれのあるデータを、適法な権限なく入力、共有又は利用する行為</li>
+            <li>(15) 本サービスの全部または一部を、競合サービスの開発、提供、改善、分析その他これらに準ずる目的で利用する行為</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第18条(バックアップ)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>当社は、システムの安定運用のため合理的な範囲で本サービスに関してバックアップ等の措置を講じるよう努めますが、ユーザーデータの完全な保存、復元を保証しません。</li>
+            <li><span class="font-bold mr-2">2.</span>ユーザーは、重要なユーザーデータについて、ユーザー自身でも保全 (エクスポート、保存等)を行うものとし、最終的な保全責任はユーザーにあることを確認します。</li>
+            <li><span class="font-bold mr-2">3.</span>当社は、バックアップ媒体、ログ、キャッシュその他の技術的理由により一時的に残存するデータについても、完全な消去または復元を保証するものではありません。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第19条(利用停止・解除)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>ユーザーが本サービスの利用料金を支払期日から30日経過しても支払わない場合、当社は、ユーザーへの事前通知または催告を行ったうえで(ただし緊急性がある場合はこの限りではありません)、本サービスの全部または一部の提供を停止できるものとします。</li>
+            <li><span class="font-bold mr-2">2.</span>当社は、ユーザーが以下のいずれかに該当する場合、事前通知・催告なく本サービスの提供を停止し、または利用契約を解除できるものとします。
+              <ul class="list-none pl-6 mt-3 space-y-1.5 text-gray-600">
+                <li>(1) 本規約または条件等に重大な違反がある場合</li>
+                <li>(2) 第17条(禁止事項) に違反した場合</li>
+                <li>(3) 債務の全部又は一部の履行が不能であるとき又は相手方がその債務の全部又は一部の履行を拒絶する意思を明確に表示したとき。ただし、一部の履行不能の場合の解除は当該一部に限る。</li>
+                <li>(4) 債務の一部の履行が不能である場合、又はその債務の一部の履行を拒絶する意思を明確に表示した場合において、残存する部分のみでは契約をした目的を達することができないとき</li>
+                <li>(5) 特定の日時又は一定の期間内に履行をしなければ本契約の目的を達することができない場合において、相手方が履行をしないでその時期を経過したとき</li>
+                <li>(6) 差押え、仮差押え、仮処分、強制執行、競売、滞納処分の申立、その他公権力の処分を受けたとき</li>
+                <li>(7) 破産手続開始、民事再生手続開始、会社更生手続開始その他法的倒産手続の申立を受け、若しくはこれらの申立を行ったとき、又は私的整理の開始があったとき</li>
+                <li>(8) ユーザー、並びにこれらの関係会社・組織 (その役員及びこれらに準じる者を含む)、株主、取引先(再委託先を含むがこれに限らない) 及び顧問その他のアドバイザー等に、第23条第1項に定める反社会的勢力が含まれていること、資金提供その他を通じて反社会的勢力の維持、運営又は経営に協力又は関与していること、その他反社会的勢力を交流があること又はその疑いがあることが判明したとき</li>
+                <li>(9) 公序良俗に反する行為、その他相手方の信用、名誉を毀損する等の背信的行為があったとき</li>
+                <li>(10) 解散し、又は事業を廃止したとき</li>
+                <li>(11) 信用の失墜又はその資産の重大な変動等により、甲乙間の信頼関係が損なわれ、本契約の継続が困難であると認める事態が発生したとき</li>
+                <li>(12) その他本契約を継続し難い重大な事由が発生した場合</li>
+              </ul>
+            </li>
+            <li><span class="font-bold mr-2">3.</span>前各項に基づく停止・解除によりユーザーに損害が生じても、当社は責任を負いません。ただし、当社の故意または重過失による場合は、この限りではありません。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第20条(ユーザーによる解約)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>ユーザーは、利用契約の期間中であっても1か月以上前に当社に通知する方法により解約を申し出ることができます。</li>
+            <li><span class="font-bold mr-2">2.</span>ユーザーは、利用契約を解約した場合、解約と同時に期限の利益を喪失し、当社に対し負担する全ての債務を直ちに履行します。また、解約の理由を問わず、当社は、ユーザーに対し、未利用分の利用料金を返還しません。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第21条(契約終了後のデータ処理)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>利用契約が終了した場合、ユーザーおよび利用者は、直ちに本サービスの利用を終了し、以後利用できません。</li>
+            <li><span class="font-bold mr-2">2.</span>当社は、利用契約終了後、ユーザーデータを原則として終了日から60日以内に削除するものとします。ただし、以下の場合は、この限りではありません。
+              <ul class="list-none pl-6 mt-3 space-y-1.5 text-gray-600">
+                <li>(1) 法令または監査対応上、一定期間の保存が必要な場合</li>
+                <li>(2) 障害対応、セキュリティ確保、バックアップ運用上、合理的に必要な期間保持する場合(例:バックアップ媒体に最大90日程度残存する場合があります)</li>
+                <li>(3) ユーザーから削除時期の変更を求められ、当社が書面で合意した場合</li>
+              </ul>
+            </li>
+            <li><span class="font-bold mr-2">3.</span>当社は、前項にかかわらず、第14条第4項に定める統計化・匿名化等により識別不能化した情報については、削除義務を負わず、当社の目的の範囲で保有・利用できるものとします。</li>
+            <li><span class="font-bold mr-2">4.</span>当社が本条に従いユーザーデータを削除したことによりユーザーに損害が生じても、当社は、ユーザーに対し責任を負いません。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第22条(秘密保持)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>当社およびユーザーは、機密情報を本サービス目的の範囲でのみ利用するものとし、相手方の承諾なく第三者へ開示してはならないものとします。</li>
+            <li><span class="font-bold mr-2">2.</span>機密情報の被開示者は、機密情報を滅失、毀損、漏えい、窃取等が生じないよう善良な管理者の注意をもって管理するものとします。</li>
+            <li><span class="font-bold mr-2">3.</span>機密情報の被開示者は、開示者の事前承諾なく、機密情報について逆コンパイル、逆アセンブルその他の解析を行ってはなりません。ただし、本サービスの運用、保守、バックアップ、分析、障害対応その他合理的に必要な範囲での処理は、この限りではありません。</li>
+            <li><span class="font-bold mr-2">4.</span>本サービスの目的達成に必要な範囲に限り、機密情報の被開示者は、役員・従業員、弁護士、会計士、税理士等の専門家、業務委託先、クラウド事業者等に対して機密情報を開示できるものとします。この場合、機密情報の被開示者は、当該第三者に本条と同等以上の守秘義務を課すものとします。</li>
+            <li><span class="font-bold mr-2">5.</span>本項に基づき機密情報を開示した第三者が守秘義務に違反した場合、当該第三者の行為は、機密情報の被開示者の行為とみなします。ただし、機密情報の被開示者が当該第三者の選任および監督について合理的な注意義務を尽くしていた場合は、この限りではありません。</li>
+            <li><span class="font-bold mr-2">6.</span>機密情報の開示は、被開示者に対し、当該機密情報に関する著作権、特許権、ノウハウその他一切の知的財産権の譲渡または実施権、利用権、使用許諾を付与するものではありません。</li>
+            <li><span class="font-bold mr-2">7.</span>被開示者は、機密情報を自己の知的財産として出願してはなりません。</li>
+            <li><span class="font-bold mr-2">8.</span>ユーザーおよび利用者は、利用契約終了後も3年間本条に定める守秘義務を負うものとします。</li>
+            <li><span class="font-bold mr-2">9.</span>機密情報の被開示者は、相手方から求めがあった場合または本契約終了時には、機密情報を返還または合理的な方法で消去するものとします。ただし、法令対応、監査対応、バックアップ運用その他合理的理由により一定期間保存される情報についてはこの限りではありません。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第23条(反社会的勢力の排除)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>当社及びユーザーは、それぞれ相手方に対し、次の各号の事項を表明し、かつ保証します。
+              <ul class="list-none pl-6 mt-3 space-y-1.5 text-gray-600">
+                <li>(1) 自ら又は自らの役員若しくは実質的に経営権を有する者が、現在、暴力団、暴力団員、暴力団員でなくなった時から5年を経過しない者、暴力団準構成員、暴力団関係企業・団体、総会屋等、社会運動等標榜ゴロ又は特殊知能暴力集団その他これらに準ずる者(以下総称して「反社会的勢力」という。)に該当しないこと</li>
+                <li>(2) 反社会的勢力が経営を支配していると認められる関係を有しないこと</li>
+                <li>(3) 反社会的勢力が経営に実質的に関与していると認められる関係を有しないこと</li>
+                <li>(4) 反社会的勢力を利用していると認められる関係を有しないこと</li>
+                <li>(5) 反社会的勢力に対して資金等を提供し、又は便宜を供与する等の関与をしていると認められる関係を有しないこと</li>
+                <li>(6) 反社会的勢力と社会的に非難されるべき関係を有しないこと</li>
+              </ul>
+            </li>
+            <li><span class="font-bold mr-2">2.</span>当社及びユーザーは、自ら又は第三者を利用して次の各号の行為を行わないことを確約する。
+              <ul class="list-none pl-6 mt-3 space-y-1.5 text-gray-600">
+                <li>(1) 暴力的な要求行為</li>
+                <li>(2) 法的な責任を超えた不当な要求行為</li>
+                <li>(3) 取引に関して、脅迫的な言動をし、又は暴力を用いる行為</li>
+                <li>(4) 風説を流布し、偽計又は威力を用いて相手方の信用を毀損し、又は相手方の業務を妨害する行為</li>
+                <li>(5) その他前各号に準ずる行為</li>
+              </ul>
+            </li>
+            <li><span class="font-bold mr-2">3.</span>第19条第2項第8号の規定により利用契約が解除された場合、解除された者は、解除により損害が生じたときでも、相手方に対し一切の損害賠償請求を行いません。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第24条(損害賠償責任制限)</h2>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li><span class="font-bold mr-2">1.</span>当社の責めに帰すべき事由によりユーザーに損害が生じた場合であっても、当社は、故意または重過失がある場合に限り、損害賠償責任を負うものとします。</li>
+            <li><span class="font-bold mr-2">2.</span>前項の場合における当社の損害賠償責任の上限は、損害発生月の直近1年分の利用料金相当額とします。ただし、ユーザーが損害を立証した場合はこの限りではありません。</li>
+            <li><span class="font-bold mr-2">3.</span>当社は、逸失利益、間接損害、特別損害について責任を負いません。ただし、当社の故意または重過失による場合は、法令上認められるときに限り適用されます。</li>
+            <li><span class="font-bold mr-2">4.</span>ユーザーは、本規約違反または本サービスの利用に関連して当社に損害を与えた場合、当社に生じた損害(合理的な弁護士費用を含みます。)を賠償します。</li>
+            <li><span class="font-bold mr-2">5.</span>当社またはユーザーは、相手方が本規約に違反し、特に機密情報の漏えいその他回復困難な損害が生じるおそれがある場合、損害賠償に加え、当該行為の差止めその他必要な措置を請求できるものとします。</li>
+          </ul>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第25条(不可抗力)</h2>
+          <p class="mb-6">
+            天災地変、感染症、法令改廃、外部サービスの停止、通信回線障害、第三者による妨害行為その他不可抗力により本サービスの提供が困難となった場合、当社は、これによりユーザーに生じた損害について責任を負いません。
+          </p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第26条(権利義務の譲渡禁止)</h2>
+          <p class="mb-4">
+            ユーザーは、当社の事前の書面承諾なく、アカウント、利用契約上の地位または本規約に基づく権利義務を第三者に譲渡、移転、担保設定その他処分できません。
+          </p>
+          <p class="mb-6">
+            当社は、本サービスに係る事業を第三者に譲渡(会社分割等を含む)する場合、利用契約上の地位、権利義務および登録事項等を譲渡でき、ユーザーはあらかじめこれに同意します。
+          </p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第27条(分離可能性)</h2>
+          <p class="mb-6">
+            本規約の一部が無効または執行不能と判断された場合でも、残りの規定は継続して有効に存続します。
+          </p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第28条(準拠法・管轄)</h2>
+          <p class="mb-6">
+            本規約および利用契約の準拠法は日本法とし、本サービスに関して紛争が生じた場合、東京地方裁判所または東京簡易裁判所を第一審の専属的合意管轄裁判所とします(訴額に応じます)。
+          </p>
+
+          <h2 class="text-xl lg:text-2xl font-bold text-ec-green-dark border-b-2 border-ec-green-pale pb-3 mt-12 mb-6">第29条(協議)</h2>
+          <p class="mb-12">
+            本規約に定めのない事項または解釈に疑義が生じた場合、当社およびユーザーは、誠意をもって協議し解決するものとします。
+          </p>
+
+          <div class="text-right text-gray-500 mb-6">
+            <p>以上</p>
+            <p>制定日:2026年2月1日</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-white pb-8 border-t border-gray-100">
+      <div class="max-w-5xl mx-auto px-4 lg:px-8 pt-12">
+        <div class="flex justify-center mb-8">
+          <a href="index.html">
+            <img
+              src="images/common/logo-green.png"
+              alt="EC家計簿"
+              class="h-12 w-auto object-contain"
+            />
+          </a>
+        </div>
+        <div class="text-center text-gray-400 text-xs">© Ritaen 2026</div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menu-btn");
+        const menuClose = document.getElementById("menu-close");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const hamburgerLines = document.querySelectorAll(".hamburger-line");
+        const mobileLinks = document.querySelectorAll(".mobile-link");
+
+        const closeMenu = () => {
+          mobileMenu.classList.add("translate-x-full");
+          mobileMenu.classList.remove("translate-x-0");
+          hamburgerLines.forEach((line) => {
+            line.classList.remove("bg-gray-800");
+            line.classList.add("bg-white");
+          });
+        };
+
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("translate-x-full");
+          mobileMenu.classList.toggle("translate-x-0");
+          if (mobileMenu.classList.contains("translate-x-0")) {
+            hamburgerLines.forEach((line) => {
+              line.classList.remove("bg-white");
+              line.classList.add("bg-gray-800");
+            });
+          } else {
+            closeMenu();
+          }
+        });
+
+        menuClose.addEventListener("click", closeMenu);
+
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+      });
+    </script>
+  </body>
+</html>
